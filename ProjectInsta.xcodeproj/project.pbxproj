@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */; };
+		7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */; };
+		7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */; };
+		7BC961A11C67CAA0005DCD5A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC961A01C67CAA0005DCD5A /* ProfileViewController.swift */; };
 		7BCDFB181C67B9BE004C6500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB171C67B9BE004C6500 /* AppDelegate.swift */; };
-		7BCDFB1A1C67B9BE004C6500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB191C67B9BE004C6500 /* ViewController.swift */; };
 		7BCDFB1D1C67B9BE004C6500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDFB1B1C67B9BE004C6500 /* Main.storyboard */; };
 		7BCDFB201C67B9BE004C6500 /* ProjectInsta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB1E1C67B9BE004C6500 /* ProjectInsta.xcdatamodeld */; };
 		7BCDFB221C67B9BE004C6500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDFB211C67B9BE004C6500 /* Assets.xcassets */; };
 		7BCDFB251C67B9BE004C6500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDFB231C67B9BE004C6500 /* LaunchScreen.storyboard */; };
 		7BCDFB301C67B9BE004C6500 /* ProjectInstaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB2F1C67B9BE004C6500 /* ProjectInstaTests.swift */; };
 		7BCDFB3B1C67B9BE004C6500 /* ProjectInstaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB3A1C67B9BE004C6500 /* ProjectInstaUITests.swift */; };
+		7BCDFB491C67B9EE004C6500 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCDFB481C67B9EE004C6500 /* MapKit.framework */; };
+		7BCDFB4F1C67C032004C6500 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB4E1C67C032004C6500 /* ImageTableViewCell.swift */; };
+		7BCDFB511C67C05A004C6500 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDFB501C67C05A004C6500 /* ImageTableViewCell.xib */; };
+		7BCDFB561C67C15C004C6500 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB551C67C15C004C6500 /* HomeViewController.swift */; };
+		7BCDFB581C67C22E004C6500 /* LogInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDFB571C67C22E004C6500 /* LogInView.xib */; };
+		7BCDFB5A1C67C24C004C6500 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB591C67C24C004C6500 /* LogInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		7BC961A01C67CAA0005DCD5A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7BCDFB141C67B9BE004C6500 /* ProjectInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCDFB171C67B9BE004C6500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7BCDFB191C67B9BE004C6500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7BCDFB1C1C67B9BE004C6500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BCDFB1F1C67B9BE004C6500 /* ProjectInsta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectInsta.xcdatamodel; sourceTree = "<group>"; };
 		7BCDFB211C67B9BE004C6500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +61,12 @@
 		7BCDFB361C67B9BE004C6500 /* ProjectInstaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectInstaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCDFB3A1C67B9BE004C6500 /* ProjectInstaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInstaUITests.swift; sourceTree = "<group>"; };
 		7BCDFB3C1C67B9BE004C6500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BCDFB481C67B9EE004C6500 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7BCDFB4E1C67C032004C6500 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTableViewCell.swift; path = ../ImageTableViewCell.swift; sourceTree = "<group>"; };
+		7BCDFB501C67C05A004C6500 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		7BCDFB551C67C15C004C6500 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7BCDFB571C67C22E004C6500 /* LogInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInView.xib; sourceTree = "<group>"; };
+		7BCDFB591C67C24C004C6500 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInView.swift; path = ProjectInsta/LogInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BCDFB491C67B9EE004C6500 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +98,7 @@
 		7BCDFB0B1C67B9BD004C6500 = {
 			isa = PBXGroup;
 			children = (
+				7BCDFB481C67B9EE004C6500 /* MapKit.framework */,
 				7BCDFB161C67B9BE004C6500 /* ProjectInsta */,
 				7BCDFB2E1C67B9BE004C6500 /* ProjectInstaTests */,
 				7BCDFB391C67B9BE004C6500 /* ProjectInstaUITests */,
@@ -99,12 +119,13 @@
 		7BCDFB161C67B9BE004C6500 /* ProjectInsta */ = {
 			isa = PBXGroup;
 			children = (
-				7BCDFB171C67B9BE004C6500 /* AppDelegate.swift */,
-				7BCDFB191C67B9BE004C6500 /* ViewController.swift */,
-				7BCDFB1B1C67B9BE004C6500 /* Main.storyboard */,
-				7BCDFB211C67B9BE004C6500 /* Assets.xcassets */,
-				7BCDFB231C67B9BE004C6500 /* LaunchScreen.storyboard */,
+				7BCDFB5C1C67C270004C6500 /* Core Data + AppDelegate */,
+				7BCDFB5B1C67C252004C6500 /* Log In Xib + View */,
+				7BCDFB541C67C125004C6500 /* ViewControllers */,
+				7BCDFB531C67C0E4004C6500 /* StoryBoard + LaunchScreen */,
+				7BCDFB521C67C085004C6500 /* ImageTableViewCell Overlay */,
 				7BCDFB261C67B9BE004C6500 /* Info.plist */,
+				7BCDFB211C67B9BE004C6500 /* Assets.xcassets */,
 				7BCDFB1E1C67B9BE004C6500 /* ProjectInsta.xcdatamodeld */,
 			);
 			path = ProjectInsta;
@@ -126,6 +147,54 @@
 				7BCDFB3C1C67B9BE004C6500 /* Info.plist */,
 			);
 			path = ProjectInstaUITests;
+			sourceTree = "<group>";
+		};
+		7BCDFB521C67C085004C6500 /* ImageTableViewCell Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				7BCDFB4E1C67C032004C6500 /* ImageTableViewCell.swift */,
+				7BCDFB501C67C05A004C6500 /* ImageTableViewCell.xib */,
+			);
+			name = "ImageTableViewCell Overlay";
+			sourceTree = "<group>";
+		};
+		7BCDFB531C67C0E4004C6500 /* StoryBoard + LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7BCDFB231C67B9BE004C6500 /* LaunchScreen.storyboard */,
+				7BCDFB1B1C67B9BE004C6500 /* Main.storyboard */,
+			);
+			name = "StoryBoard + LaunchScreen";
+			sourceTree = "<group>";
+		};
+		7BCDFB541C67C125004C6500 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BCDFB551C67C15C004C6500 /* HomeViewController.swift */,
+				7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */,
+				7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */,
+				7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */,
+				7BC961A01C67CAA0005DCD5A /* ProfileViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7BCDFB5B1C67C252004C6500 /* Log In Xib + View */ = {
+			isa = PBXGroup;
+			children = (
+				7BCDFB571C67C22E004C6500 /* LogInView.xib */,
+				7BCDFB591C67C24C004C6500 /* LogInView.swift */,
+			);
+			name = "Log In Xib + View";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7BCDFB5C1C67C270004C6500 /* Core Data + AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7BCDFB171C67B9BE004C6500 /* AppDelegate.swift */,
+			);
+			name = "Core Data + AppDelegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +305,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BCDFB251C67B9BE004C6500 /* LaunchScreen.storyboard in Resources */,
+				7BCDFB511C67C05A004C6500 /* ImageTableViewCell.xib in Resources */,
+				7BCDFB581C67C22E004C6500 /* LogInView.xib in Resources */,
 				7BCDFB221C67B9BE004C6500 /* Assets.xcassets in Resources */,
 				7BCDFB1D1C67B9BE004C6500 /* Main.storyboard in Resources */,
 			);
@@ -262,8 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BCDFB1A1C67B9BE004C6500 /* ViewController.swift in Sources */,
+				7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */,
+				7BCDFB5A1C67C24C004C6500 /* LogInView.swift in Sources */,
+				7BCDFB4F1C67C032004C6500 /* ImageTableViewCell.swift in Sources */,
+				7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */,
 				7BCDFB201C67B9BE004C6500 /* ProjectInsta.xcdatamodeld in Sources */,
+				7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */,
+				7BC961A11C67CAA0005DCD5A /* ProfileViewController.swift in Sources */,
+				7BCDFB561C67C15C004C6500 /* HomeViewController.swift in Sources */,
 				7BCDFB181C67B9BE004C6500 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ProjectInsta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MobileMakers.ProjectInsta;
@@ -415,6 +493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ProjectInsta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MobileMakers.ProjectInsta;
@@ -489,6 +568,7 @@
 				7BCDFB411C67B9BE004C6500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BCDFB421C67B9BE004C6500 /* Build configuration list for PBXNativeTarget "ProjectInstaTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +577,7 @@
 				7BCDFB441C67B9BE004C6500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BCDFB451C67B9BE004C6500 /* Build configuration list for PBXNativeTarget "ProjectInstaUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +586,7 @@
 				7BCDFB471C67B9BE004C6500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
