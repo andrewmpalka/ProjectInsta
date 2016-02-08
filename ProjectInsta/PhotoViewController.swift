@@ -1,6 +1,5 @@
 //
-//  Photo
-ViewController.swift
+//  PhotoViewController.swift
 //  ProjectInsta
 //
 //  Created by Andrew Palka on 2/7/16.
@@ -8,6 +7,7 @@ ViewController.swift
 //
 
 import UIKit
+import Firebase
 
 class PhotoViewController: UIViewController {
 
