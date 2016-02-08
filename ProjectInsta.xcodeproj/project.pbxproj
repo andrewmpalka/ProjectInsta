@@ -24,6 +24,9 @@
 		7BCDFB561C67C15C004C6500 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB551C67C15C004C6500 /* HomeViewController.swift */; };
 		7BCDFB581C67C22E004C6500 /* LogInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDFB571C67C22E004C6500 /* LogInView.xib */; };
 		7BCDFB5A1C67C24C004C6500 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDFB591C67C24C004C6500 /* LogInView.swift */; };
+		7BD3F3341C692C17003DFE7A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3F3331C692C17003DFE7A /* DataService.swift */; };
+		7BD3F3361C6931DE003DFE7A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3F3351C6931DE003DFE7A /* LogInViewController.swift */; };
+		7BD3F3381C6932D6003DFE7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3F3371C6932D6003DFE7A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		7BCDFB551C67C15C004C6500 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7BCDFB571C67C22E004C6500 /* LogInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInView.xib; sourceTree = "<group>"; };
 		7BCDFB591C67C24C004C6500 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInView.swift; path = ProjectInsta/LogInView.swift; sourceTree = "<group>"; };
+		7BD3F3331C692C17003DFE7A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		7BD3F3351C6931DE003DFE7A /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ProjectInsta/LogInViewController.swift; sourceTree = "<group>"; };
+		7BD3F3371C6932D6003DFE7A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		7BCDFB161C67B9BE004C6500 /* ProjectInsta */ = {
 			isa = PBXGroup;
 			children = (
+				7BD3F3321C692C01003DFE7A /* Services & Utilities */,
 				7BCDFB5C1C67C270004C6500 /* Core Data + AppDelegate */,
 				7BCDFB5B1C67C252004C6500 /* Log In Xib + View */,
 				7BCDFB541C67C125004C6500 /* ViewControllers */,
@@ -182,6 +189,7 @@
 		7BCDFB5B1C67C252004C6500 /* Log In Xib + View */ = {
 			isa = PBXGroup;
 			children = (
+				7BD3F3351C6931DE003DFE7A /* LogInViewController.swift */,
 				7BCDFB571C67C22E004C6500 /* LogInView.xib */,
 				7BCDFB591C67C24C004C6500 /* LogInView.swift */,
 			);
@@ -195,6 +203,15 @@
 				7BCDFB171C67B9BE004C6500 /* AppDelegate.swift */,
 			);
 			name = "Core Data + AppDelegate";
+			sourceTree = "<group>";
+		};
+		7BD3F3321C692C01003DFE7A /* Services & Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7BD3F3331C692C17003DFE7A /* DataService.swift */,
+				7BD3F3371C6932D6003DFE7A /* Constants.swift */,
+			);
+			name = "Services & Utilities";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +352,7 @@
 			files = (
 				7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */,
 				7BCDFB5A1C67C24C004C6500 /* LogInView.swift in Sources */,
+				7BD3F3361C6931DE003DFE7A /* LogInViewController.swift in Sources */,
 				7BCDFB4F1C67C032004C6500 /* ImageTableViewCell.swift in Sources */,
 				7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */,
 				7BCDFB201C67B9BE004C6500 /* ProjectInsta.xcdatamodeld in Sources */,
@@ -342,6 +360,8 @@
 				7BC961A11C67CAA0005DCD5A /* ProfileViewController.swift in Sources */,
 				7BCDFB561C67C15C004C6500 /* HomeViewController.swift in Sources */,
 				7BCDFB181C67B9BE004C6500 /* AppDelegate.swift in Sources */,
+				7BD3F3341C692C17003DFE7A /* DataService.swift in Sources */,
+				7BD3F3381C6932D6003DFE7A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
