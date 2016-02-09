@@ -17,6 +17,7 @@ class LogInViewController: UIViewController {
     var ref: Firebase!
     var authHelper: TwitterAuthHelper!
     var accounts: [ACAccount]!
+    var account = ACAccount()
     
     override func viewDidLoad() {
         super.viewDidLoad()

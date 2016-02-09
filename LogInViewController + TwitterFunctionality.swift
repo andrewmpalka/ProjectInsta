@@ -14,6 +14,7 @@ extension LogInViewController {
     func authWithTwitter() {
         authHelper.selectTwitterAccountWithCallback { (error, accounts) -> Void in
             self.accounts = accounts as? [ACAccount]
+            self.selectTwitterAccount(self.accounts)
             self.handleMultipleTwitterAccounts(self.accounts)
         }
     }
