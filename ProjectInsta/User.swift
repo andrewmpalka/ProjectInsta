@@ -12,14 +12,11 @@ import Firebase
 
 class user: NSObject {
     
-    var userID: String
-    var biography: String
-    var followers = [NSMutableArray]
-    var following = [NSMutableArray]
-    var posts = [NSMutableArray]
-    var username: String
+    var userID: String?
+    var biography: String?
+    var followers: [NSMutableArray]?
+    var following: [NSMutableArray]?
+    var posts: [NSMutableArray]?
+    var username: String?
     
-    init() {
-        <#code#>
-    }
 }
