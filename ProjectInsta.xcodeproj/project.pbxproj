@@ -29,7 +29,6 @@
 		7BD3F3381C6932D6003DFE7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3F3371C6932D6003DFE7A /* Constants.swift */; };
 		7BF7653D1C695F2A00AACE88 /* TwitterAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF7653C1C695F2A00AACE88 /* TwitterAuthHelper.m */; };
 		7BF7653F1C695FD500AACE88 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF7653E1C695FD500AACE88 /* Social.framework */; };
-		7BF765421C69680600AACE88 /* Test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF765411C69680600AACE88 /* Test2.swift */; };
 		E54C3C241C692D0F00C26CC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E54C3C261C6946C800C26CC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C2E1C6964BE00C26CC1 /* Post.swift */; };
@@ -84,7 +83,6 @@
 		7BF7653B1C695F2A00AACE88 /* TwitterAuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAuthHelper.h; sourceTree = "<group>"; };
 		7BF7653C1C695F2A00AACE88 /* TwitterAuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAuthHelper.m; sourceTree = "<group>"; };
 		7BF7653E1C695FD500AACE88 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		7BF765411C69680600AACE88 /* Test2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2.swift; sourceTree = "<group>"; };
 		E54C3C2E1C6964BE00C26CC1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E54C3C2F1C6964BE00C26CC1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +139,6 @@
 		7BCDFB161C67B9BE004C6500 /* ProjectInsta */ = {
 			isa = PBXGroup;
 			children = (
-				7BF765401C6967E800AACE88 /* Test1 */,
 				E54C3C321C6964C300C26CC1 /* Models */,
 				7BD3F3321C692C01003DFE7A /* Services & Utilities */,
 				7BCDFB5C1C67C270004C6500 /* Core Data + AppDelegate */,
@@ -233,14 +230,6 @@
 				7BD3F3371C6932D6003DFE7A /* Constants.swift */,
 			);
 			name = "Services & Utilities";
-			sourceTree = "<group>";
-		};
-		7BF765401C6967E800AACE88 /* Test1 */ = {
-			isa = PBXGroup;
-			children = (
-				7BF765411C69680600AACE88 /* Test2.swift */,
-			);
-			name = Test1;
 			sourceTree = "<group>";
 		};
 		E54C3C321C6964C300C26CC1 /* Models */ = {
@@ -400,7 +389,6 @@
 				7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */,
 				7BC961A11C67CAA0005DCD5A /* ProfileViewController.swift in Sources */,
 				7BCDFB561C67C15C004C6500 /* HomeViewController.swift in Sources */,
-				7BF765421C69680600AACE88 /* Test2.swift in Sources */,
 				E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */,
 				7BCDFB181C67B9BE004C6500 /* AppDelegate.swift in Sources */,
 				7BD3F3341C692C17003DFE7A /* DataService.swift in Sources */,
