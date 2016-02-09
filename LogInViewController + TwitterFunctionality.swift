@@ -31,8 +31,8 @@ extension LogInViewController {
                 NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "\(authData.uid)")
                 NSUserDefaults.standardUserDefaults().synchronize()
                 
-                let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                appDelegate.login()
+//                let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                self.appDelegate.login()
             }
         })
     }

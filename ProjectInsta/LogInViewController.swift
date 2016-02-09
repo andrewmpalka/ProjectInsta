@@ -18,7 +18,7 @@ class LogInViewController: UIViewController {
     var authHelper: TwitterAuthHelper!
     var accounts: [ACAccount]!
     var account = ACAccount()
-    var appDelegate = AppDelegate()
+    var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,7 @@ class LogInViewController: UIViewController {
         
         if ((NSUserDefaults.standardUserDefaults().valueForKey("\( DataService.ds.REF_USER.authData.uid)") != nil)) {
 //        self.performSegueWithIdentifier("logInSegue", sender: nil)
-            let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.login()
+            self.appDelegate.login()
         }
         
         ref = Firebase(url:"https://instagramproject.firebaseio.com/")
@@ -69,12 +68,17 @@ class LogInViewController: UIViewController {
                                     appDelegate.login()
                                 })
                                 
-                                self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: nil)
+//                                self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: nil)
                             }
                             }
                         )}
                 } else {
-                    self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: nil)
+                    NSUserDefaults.standardUserDefaults().setObject(authData.uid, forKey: "\(authData.uid)")
+                    NSUserDefaults.standardUserDefaults().synchronize()
+//                    let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                    self.appDelegate.login()
+
+//                    self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: nil)
                 }
                 }
             )} else {
