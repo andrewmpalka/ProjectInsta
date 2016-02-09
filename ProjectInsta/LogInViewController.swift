@@ -9,10 +9,14 @@
 import UIKit
 import Firebase
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UIActionSheetDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var ref: Firebase!
+    var authHelper: TwitterAuthHelper!
+    var accounts: [ACAccount]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
