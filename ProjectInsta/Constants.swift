@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import Firebase
 
-
-let KEY_ID = "\(DataService.ds.REF_USER.authData.uid)"
+let KEY_ID = "uid"
+//let KEY_ID = "\(DataService.ds.REF_USER.authData.uid)"
 
 let STATUS_ACCOUNT_NONEXIST = -8
 
