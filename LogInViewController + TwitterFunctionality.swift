@@ -27,7 +27,7 @@ extension LogInViewController {
                 // We have an authenticated Twitter user
                 NSLog("%@", authData)
                 // segue to chat
-                self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: authData)
+//                self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: authData)
                 NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "\(authData.uid)")
                 NSUserDefaults.standardUserDefaults().synchronize()
                 

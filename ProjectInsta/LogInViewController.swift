@@ -19,6 +19,7 @@ class LogInViewController: UIViewController {
     var accounts: [ACAccount]!
     var account = ACAccount()
     var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+      var window: UIWindow?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +29,17 @@ class LogInViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        ref = Firebase(url:"https://instagramproject.firebaseio.com/")
+        authHelper = TwitterAuthHelper(firebaseRef:ref, apiKey: "rV9QqoE4d7aYzoidVJfrvOwmy")
         
         if ((NSUserDefaults.standardUserDefaults().valueForKey("\( DataService.ds.REF_USER.authData.uid)") != nil)) {
 //        self.performSegueWithIdentifier("logInSegue", sender: nil)
-            self.appDelegate.login()
+//            self.appDelegate.login()
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let myTabBar = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+            window?.rootViewController = myTabBar
+            
         }
-        
-        ref = Firebase(url:"https://instagramproject.firebaseio.com/")
-        authHelper = TwitterAuthHelper(firebaseRef:ref, apiKey: "rV9QqoE4d7aYzoidVJfrvOwmy")
-
     }
     
     @IBAction func onLogInButtonTapped(sender: UIButton) {
