@@ -11,6 +11,9 @@
 		7BC2B0F01C6A3EBD00197F76 /* LogInViewController + TwitterFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2B0EF1C6A3EBD00197F76 /* LogInViewController + TwitterFunctionality.swift */; };
 		7BC2BCF11C6AA81600197F76 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCEF1C6AA81600197F76 /* AWSCore.framework */; };
 		7BC2BCF21C6AA81600197F76 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF01C6AA81600197F76 /* AWSS3.framework */; };
+		7BC2BCF41C6AA98F00197F76 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF31C6AA98F00197F76 /* libz.tbd */; };
+		7BC2BCF61C6AA9A500197F76 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF51C6AA9A500197F76 /* SystemConfiguration.framework */; };
+		7BC2BCF81C6AA9B500197F76 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF71C6AA9B500197F76 /* libsqlite3.tbd */; };
 		7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */; };
 		7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */; };
 		7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */; };
@@ -63,6 +66,9 @@
 		7BC2B0EF1C6A3EBD00197F76 /* LogInViewController + TwitterFunctionality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogInViewController + TwitterFunctionality.swift"; sourceTree = "<group>"; };
 		7BC2BCEF1C6AA81600197F76 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = "../../../aws-ios-sdk-2.3.4/frameworks/AWSCore.framework"; sourceTree = "<group>"; };
 		7BC2BCF01C6AA81600197F76 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = "../../../aws-ios-sdk-2.3.4/frameworks/AWSS3.framework"; sourceTree = "<group>"; };
+		7BC2BCF31C6AA98F00197F76 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7BC2BCF51C6AA9A500197F76 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7BC2BCF71C6AA9B500197F76 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC2BCF81C6AA9B500197F76 /* libsqlite3.tbd in Frameworks */,
+				7BC2BCF61C6AA9A500197F76 /* SystemConfiguration.framework in Frameworks */,
+				7BC2BCF41C6AA98F00197F76 /* libz.tbd in Frameworks */,
 				7BF7653F1C695FD500AACE88 /* Social.framework in Frameworks */,
 				7BC2BCF11C6AA81600197F76 /* AWSCore.framework in Frameworks */,
 				7BCDFB491C67B9EE004C6500 /* MapKit.framework in Frameworks */,
@@ -130,6 +139,9 @@
 		6F45C613FC0E8D86DD1673C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BC2BCF71C6AA9B500197F76 /* libsqlite3.tbd */,
+				7BC2BCF51C6AA9A500197F76 /* SystemConfiguration.framework */,
+				7BC2BCF31C6AA98F00197F76 /* libz.tbd */,
 				7BC2BCEF1C6AA81600197F76 /* AWSCore.framework */,
 				7BC2BCF01C6AA81600197F76 /* AWSS3.framework */,
 				43CBA705E4816CCE574EB9A6 /* Pods_ProjectInsta.framework */,
