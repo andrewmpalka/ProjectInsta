@@ -8,12 +8,27 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    func login() {
+        
+        // remember user's login
+        let username : String? = NSUserDefaults.standardUserDefaults().stringForKey("\( DataService.ds.REF_USER.authData.uid)")
+        
+        // if loged in
+        if username != nil {
+            
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let myTabBar = storyboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+            window?.rootViewController = myTabBar
+        }
+        
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

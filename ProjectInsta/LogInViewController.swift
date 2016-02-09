@@ -18,6 +18,7 @@ class LogInViewController: UIViewController {
     var authHelper: TwitterAuthHelper!
     var accounts: [ACAccount]!
     var account = ACAccount()
+    var appDelegate = AppDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,10 @@ class LogInViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        if ((NSUserDefaults.standardUserDefaults().valueForKey(KEY_ID) != nil)) {
-        self.performSegueWithIdentifier("logInSegue", sender: nil)
+        if ((NSUserDefaults.standardUserDefaults().valueForKey("\( DataService.ds.REF_USER.authData.uid)") != nil)) {
+//        self.performSegueWithIdentifier("logInSegue", sender: nil)
+            let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.login()
         }
         
         ref = Firebase(url:"https://instagramproject.firebaseio.com/")
@@ -50,8 +53,8 @@ class LogInViewController: UIViewController {
                             } else {
                                 
                                                                 
-                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_ID], forKey: KEY_ID)
-                                
+//                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_ID], forKey: KEY_ID)
+
                                 
                                 DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: {
                                     err, authData in
@@ -59,14 +62,17 @@ class LogInViewController: UIViewController {
                                     let user = ["provider": authData.provider!, "blah":"emailTest"]
                                     DataService.ds.createFirebaseUser(authData.uid, user: user)
                                     
+                                    NSUserDefaults.standardUserDefaults().setObject(authData.uid, forKey: "\(authData.uid)")
+                                    NSUserDefaults.standardUserDefaults().synchronize()
+                                    
+                                    let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                                    appDelegate.login()
                                 })
                                 
                                 self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: nil)
                             }
-                            
                             }
                         )}
-                    
                 } else {
                     self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: nil)
                 }

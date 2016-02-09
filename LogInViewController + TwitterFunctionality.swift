@@ -28,14 +28,17 @@ extension LogInViewController {
                 NSLog("%@", authData)
                 // segue to chat
                 self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: authData)
+                NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "\(authData.uid)")
+                NSUserDefaults.standardUserDefaults().synchronize()
+                
+                let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.login()
             }
         })
     }
     
     func selectTwitterAccount(accounts: [ACAccount]) {
         let selectUserAlertController = UIAlertController(title: "Select Twitter Account", message: "Please choose your account", preferredStyle: .ActionSheet)
-        
-        
         
         for account in accounts {
             selectUserAlertController.addAction(UIAlertAction(title: account.username, style: .Default, handler: { alertAction in
