@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31204471EE161EC119B3893D /* Pods_ProjectInsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CBA705E4816CCE574EB9A6 /* Pods_ProjectInsta.framework */; };
 		7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */; };
 		7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */; };
 		7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */; };
@@ -53,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43CBA705E4816CCE574EB9A6 /* Pods_ProjectInsta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectInsta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		568ECAC3DC015A48A79A269B /* Pods-ProjectInsta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInsta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectInsta/Pods-ProjectInsta.debug.xcconfig"; sourceTree = "<group>"; };
+		6C644525BA38B2EE08B43135 /* Pods-ProjectInsta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInsta.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectInsta/Pods-ProjectInsta.release.xcconfig"; sourceTree = "<group>"; };
 		7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			files = (
 				7BF7653F1C695FD500AACE88 /* Social.framework in Frameworks */,
 				7BCDFB491C67B9EE004C6500 /* MapKit.framework in Frameworks */,
+				31204471EE161EC119B3893D /* Pods_ProjectInsta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F45C613FC0E8D86DD1673C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43CBA705E4816CCE574EB9A6 /* Pods_ProjectInsta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7BCDFB0B1C67B9BD004C6500 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,8 @@
 				7BCDFB2E1C67B9BE004C6500 /* ProjectInstaTests */,
 				7BCDFB391C67B9BE004C6500 /* ProjectInstaUITests */,
 				7BCDFB151C67B9BE004C6500 /* Products */,
+				F3E415340535BD433C5296DD /* Pods */,
+				6F45C613FC0E8D86DD1673C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +256,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		F3E415340535BD433C5296DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				568ECAC3DC015A48A79A269B /* Pods-ProjectInsta.debug.xcconfig */,
+				6C644525BA38B2EE08B43135 /* Pods-ProjectInsta.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,9 +272,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BCDFB3F1C67B9BE004C6500 /* Build configuration list for PBXNativeTarget "ProjectInsta" */;
 			buildPhases = (
+				C1389DD2722C46FC5B6A9F7A /* Check Pods Manifest.lock */,
 				7BCDFB101C67B9BE004C6500 /* Sources */,
 				7BCDFB111C67B9BE004C6500 /* Frameworks */,
 				7BCDFB121C67B9BE004C6500 /* Resources */,
+				FE34080765D32443595B8DB4 /* Embed Pods Frameworks */,
+				E730C35E261C4BAAF378BB80 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -371,6 +398,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C1389DD2722C46FC5B6A9F7A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E730C35E261C4BAAF378BB80 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectInsta/Pods-ProjectInsta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE34080765D32443595B8DB4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectInsta/Pods-ProjectInsta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7BCDFB101C67B9BE004C6500 /* Sources */ = {
@@ -531,6 +606,7 @@
 		};
 		7BCDFB401C67B9BE004C6500 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 568ECAC3DC015A48A79A269B /* Pods-ProjectInsta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -546,6 +622,7 @@
 		};
 		7BCDFB411C67B9BE004C6500 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C644525BA38B2EE08B43135 /* Pods-ProjectInsta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
