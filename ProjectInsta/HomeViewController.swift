@@ -13,7 +13,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        DataService.ds.REF_POST.observeEventType(.Value, withBlock: { snapshot in
+          
+            print(snapshot.value)
+        })
     }
     
 
