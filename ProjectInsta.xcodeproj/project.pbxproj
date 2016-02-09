@@ -33,7 +33,6 @@
 		E54C3C261C6946C800C26CC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C2E1C6964BE00C26CC1 /* Post.swift */; };
 		E54C3C311C6964BE00C26CC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C2F1C6964BE00C26CC1 /* User.swift */; };
-		E54C3C351C69681100C26CC1 /* Tesyt1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C341C69681100C26CC1 /* Tesyt1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +85,6 @@
 		7BF7653E1C695FD500AACE88 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E54C3C2E1C6964BE00C26CC1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E54C3C2F1C6964BE00C26CC1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E54C3C341C69681100C26CC1 /* Tesyt1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tesyt1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +139,6 @@
 		7BCDFB161C67B9BE004C6500 /* ProjectInsta */ = {
 			isa = PBXGroup;
 			children = (
-				E54C3C331C6967FB00C26CC1 /* Test Two */,
 				E54C3C321C6964C300C26CC1 /* Models */,
 				7BD3F3321C692C01003DFE7A /* Services & Utilities */,
 				7BCDFB5C1C67C270004C6500 /* Core Data + AppDelegate */,
@@ -242,14 +239,6 @@
 				E54C3C2F1C6964BE00C26CC1 /* User.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		E54C3C331C6967FB00C26CC1 /* Test Two */ = {
-			isa = PBXGroup;
-			children = (
-				E54C3C341C69681100C26CC1 /* Tesyt1.swift */,
-			);
-			name = "Test Two";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,7 +392,6 @@
 				E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */,
 				7BCDFB181C67B9BE004C6500 /* AppDelegate.swift in Sources */,
 				7BD3F3341C692C17003DFE7A /* DataService.swift in Sources */,
-				E54C3C351C69681100C26CC1 /* Tesyt1.swift in Sources */,
 				7BF7653D1C695F2A00AACE88 /* TwitterAuthHelper.m in Sources */,
 				7BD3F3381C6932D6003DFE7A /* Constants.swift in Sources */,
 			);
