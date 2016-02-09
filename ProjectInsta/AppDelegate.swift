@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if username != nil {
             
             let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let myTabBar = storyboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+            let myTabBar = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
             window?.rootViewController = myTabBar
         }
         
