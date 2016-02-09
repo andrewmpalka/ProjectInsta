@@ -12,12 +12,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     var posts = [Post]()
-    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
 
+<<<<<<< HEAD
         
         DataService.ds.REF_POST.observeEventType(.Value, withBlock: { snapshot in
             self.posts = []
@@ -37,39 +37,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         })
         
-        DataService.ds.REF_USER.observeEventType(.Value, withBlock: { snapshot in
-            self.users = []
-            
-            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
-                
-                for snap in snapshots {
-//                  print("SNAP \(snap)")
-                    
-                    if let userDictionary = snap.value as? (Dictionary<String, AnyObject>) {
-                        let uKey = snap.key
-                        let user = User(userKey: uKey, dictionary: userDictionary)
-                        self.users.append(user)
-                    }
-                }
-            }
-            self.tableView.reloadData()
-        })
-    
-        
-        }
-    
-    
-    
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
+=======
+        DataService.ds.REF_POST.observeEventType(.Value, withBlock: { snapshot in
+          
+            print(snapshot.value)
+        })
+>>>>>>> 8a5306f954226f145d75037f981a79fff7922116
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCellWithIdentifier("CellID"))
         let post = posts[indexPath.row]
-//        let user = users[indexPath.row]
-//        cell?.textLabel?.text = user.username
+        cell?.textLabel?.text = post.username
         cell?.detailTextLabel?.text = post.postDescription
         print(post.postDescription)
         return cell!
