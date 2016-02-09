@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		31204471EE161EC119B3893D /* Pods_ProjectInsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CBA705E4816CCE574EB9A6 /* Pods_ProjectInsta.framework */; };
 		7BC2B0F01C6A3EBD00197F76 /* LogInViewController + TwitterFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2B0EF1C6A3EBD00197F76 /* LogInViewController + TwitterFunctionality.swift */; };
+		7BC2BCF11C6AA81600197F76 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCEF1C6AA81600197F76 /* AWSCore.framework */; };
+		7BC2BCF21C6AA81600197F76 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF01C6AA81600197F76 /* AWSS3.framework */; };
 		7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */; };
 		7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */; };
 		7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */; };
@@ -59,6 +61,8 @@
 		568ECAC3DC015A48A79A269B /* Pods-ProjectInsta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInsta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectInsta/Pods-ProjectInsta.debug.xcconfig"; sourceTree = "<group>"; };
 		6C644525BA38B2EE08B43135 /* Pods-ProjectInsta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInsta.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectInsta/Pods-ProjectInsta.release.xcconfig"; sourceTree = "<group>"; };
 		7BC2B0EF1C6A3EBD00197F76 /* LogInViewController + TwitterFunctionality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogInViewController + TwitterFunctionality.swift"; sourceTree = "<group>"; };
+		7BC2BCEF1C6AA81600197F76 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = "../../../aws-ios-sdk-2.3.4/frameworks/AWSCore.framework"; sourceTree = "<group>"; };
+		7BC2BCF01C6AA81600197F76 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = "../../../aws-ios-sdk-2.3.4/frameworks/AWSS3.framework"; sourceTree = "<group>"; };
 		7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +103,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BF7653F1C695FD500AACE88 /* Social.framework in Frameworks */,
+				7BC2BCF11C6AA81600197F76 /* AWSCore.framework in Frameworks */,
 				7BCDFB491C67B9EE004C6500 /* MapKit.framework in Frameworks */,
 				31204471EE161EC119B3893D /* Pods_ProjectInsta.framework in Frameworks */,
+				7BC2BCF21C6AA81600197F76 /* AWSS3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +130,8 @@
 		6F45C613FC0E8D86DD1673C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BC2BCEF1C6AA81600197F76 /* AWSCore.framework */,
+				7BC2BCF01C6AA81600197F76 /* AWSS3.framework */,
 				43CBA705E4816CCE574EB9A6 /* Pods_ProjectInsta.framework */,
 			);
 			name = Frameworks;
