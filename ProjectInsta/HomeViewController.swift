@@ -12,6 +12,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     var posts = [Post]()
+    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,29 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         })
         
-    }
+        DataService.ds.REF_USER.observeEventType(.Value, withBlock: { snapshot in
+            self.users = []
+            
+            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+                
+                for snap in snapshots {
+//                  print("SNAP \(snap)")
+                    
+                    if let userDictionary = snap.value as? (Dictionary<String, AnyObject>) {
+                        let uKey = snap.key
+                        let user = User(userKey: uKey, dictionary: userDictionary)
+                        self.users.append(user)
+                    }
+                }
+            }
+            self.tableView.reloadData()
+        })
+    
+        
+        }
+    
+    
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -45,7 +68,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCellWithIdentifier("CellID"))
         let post = posts[indexPath.row]
-        cell?.textLabel?.text = post.username
+//        let user = users[indexPath.row]
+//        cell?.textLabel?.text = user.username
         cell?.detailTextLabel?.text = post.postDescription
         print(post.postDescription)
         return cell!
