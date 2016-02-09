@@ -55,6 +55,9 @@ class LogInViewController: UIViewController {
             )} else {
             showErrorAlert("Email and Password required", msg: "You must enter both an email and a password")
         }
+    }
+    @IBAction func onTwitterVerifyTapped(sender: UIButton) {
+        
         
     }
     func showErrorAlert(title: String, msg: String){

@@ -27,6 +27,8 @@
 		7BD3F3341C692C17003DFE7A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3F3331C692C17003DFE7A /* DataService.swift */; };
 		7BD3F3361C6931DE003DFE7A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3F3351C6931DE003DFE7A /* LogInViewController.swift */; };
 		7BD3F3381C6932D6003DFE7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3F3371C6932D6003DFE7A /* Constants.swift */; };
+		7BF7653D1C695F2A00AACE88 /* TwitterAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF7653C1C695F2A00AACE88 /* TwitterAuthHelper.m */; };
+		7BF7653F1C695FD500AACE88 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF7653E1C695FD500AACE88 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,10 @@
 		7BD3F3331C692C17003DFE7A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7BD3F3351C6931DE003DFE7A /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ProjectInsta/LogInViewController.swift; sourceTree = "<group>"; };
 		7BD3F3371C6932D6003DFE7A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7BF7653A1C695F2A00AACE88 /* ProjectInsta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectInsta-Bridging-Header.h"; sourceTree = "<group>"; };
+		7BF7653B1C695F2A00AACE88 /* TwitterAuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAuthHelper.h; sourceTree = "<group>"; };
+		7BF7653C1C695F2A00AACE88 /* TwitterAuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAuthHelper.m; sourceTree = "<group>"; };
+		7BF7653E1C695FD500AACE88 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF7653F1C695FD500AACE88 /* Social.framework in Frameworks */,
 				7BCDFB491C67B9EE004C6500 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +111,7 @@
 		7BCDFB0B1C67B9BD004C6500 = {
 			isa = PBXGroup;
 			children = (
+				7BF7653E1C695FD500AACE88 /* Social.framework */,
 				7BCDFB481C67B9EE004C6500 /* MapKit.framework */,
 				7BCDFB161C67B9BE004C6500 /* ProjectInsta */,
 				7BCDFB2E1C67B9BE004C6500 /* ProjectInstaTests */,
@@ -127,7 +135,7 @@
 			children = (
 				7BD3F3321C692C01003DFE7A /* Services & Utilities */,
 				7BCDFB5C1C67C270004C6500 /* Core Data + AppDelegate */,
-				7BCDFB5B1C67C252004C6500 /* Log In Xib + View */,
+				7BCDFB5B1C67C252004C6500 /* Log In Xib + View + VC */,
 				7BCDFB541C67C125004C6500 /* ViewControllers */,
 				7BCDFB531C67C0E4004C6500 /* StoryBoard + LaunchScreen */,
 				7BCDFB521C67C085004C6500 /* ImageTableViewCell Overlay */,
@@ -186,14 +194,17 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		7BCDFB5B1C67C252004C6500 /* Log In Xib + View */ = {
+		7BCDFB5B1C67C252004C6500 /* Log In Xib + View + VC */ = {
 			isa = PBXGroup;
 			children = (
 				7BD3F3351C6931DE003DFE7A /* LogInViewController.swift */,
 				7BCDFB571C67C22E004C6500 /* LogInView.xib */,
 				7BCDFB591C67C24C004C6500 /* LogInView.swift */,
+				7BF7653B1C695F2A00AACE88 /* TwitterAuthHelper.h */,
+				7BF7653C1C695F2A00AACE88 /* TwitterAuthHelper.m */,
+				7BF7653A1C695F2A00AACE88 /* ProjectInsta-Bridging-Header.h */,
 			);
-			name = "Log In Xib + View";
+			name = "Log In Xib + View + VC";
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -361,6 +372,7 @@
 				7BCDFB561C67C15C004C6500 /* HomeViewController.swift in Sources */,
 				7BCDFB181C67B9BE004C6500 /* AppDelegate.swift in Sources */,
 				7BD3F3341C692C17003DFE7A /* DataService.swift in Sources */,
+				7BF7653D1C695F2A00AACE88 /* TwitterAuthHelper.m in Sources */,
 				7BD3F3381C6932D6003DFE7A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,11 +513,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ProjectInsta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MobileMakers.ProjectInsta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProjectInsta-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -513,11 +528,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ProjectInsta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MobileMakers.ProjectInsta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProjectInsta-Bridging-Header.h";
 			};
 			name = Release;
 		};

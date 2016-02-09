@@ -157,8 +157,29 @@
                                     <action selector="onLogInButtonTapped:" destination="uvN-VL-AZf" eventType="touchUpInside" id="Ru5-8r-Fkf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ny8-yi-rSl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log in with Twitter"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="374" width="323" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onTwitterVerifyTapped:" destination="uvN-VL-AZf" eventType="touchUpInside" id="sEy-QQ-QB8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ny8-yi-rSl"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ny8-yi-rSl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="ID7-Iv-Epa" id="hbT-oB-RA0"/>
@@ -168,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlu-YZ-12L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1410" y="-1981"/>
+            <point key="canvasLocation" x="-2766" y="-2197"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="t7z-9S-zwV">
