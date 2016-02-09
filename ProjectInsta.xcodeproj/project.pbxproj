@@ -29,6 +29,10 @@
 		7BD3F3381C6932D6003DFE7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3F3371C6932D6003DFE7A /* Constants.swift */; };
 		7BF7653D1C695F2A00AACE88 /* TwitterAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF7653C1C695F2A00AACE88 /* TwitterAuthHelper.m */; };
 		7BF7653F1C695FD500AACE88 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF7653E1C695FD500AACE88 /* Social.framework */; };
+		E54C3C241C692D0F00C26CC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E54C3C261C6946C800C26CC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C2E1C6964BE00C26CC1 /* Post.swift */; };
+		E54C3C311C6964BE00C26CC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C2F1C6964BE00C26CC1 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,8 @@
 		7BF7653B1C695F2A00AACE88 /* TwitterAuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAuthHelper.h; sourceTree = "<group>"; };
 		7BF7653C1C695F2A00AACE88 /* TwitterAuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAuthHelper.m; sourceTree = "<group>"; };
 		7BF7653E1C695FD500AACE88 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E54C3C2E1C6964BE00C26CC1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E54C3C2F1C6964BE00C26CC1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 		7BCDFB161C67B9BE004C6500 /* ProjectInsta */ = {
 			isa = PBXGroup;
 			children = (
+				E54C3C321C6964C300C26CC1 /* Models */,
 				7BD3F3321C692C01003DFE7A /* Services & Utilities */,
 				7BCDFB5C1C67C270004C6500 /* Core Data + AppDelegate */,
 				7BCDFB5B1C67C252004C6500 /* Log In Xib + View + VC */,
@@ -223,6 +230,15 @@
 				7BD3F3371C6932D6003DFE7A /* Constants.swift */,
 			);
 			name = "Services & Utilities";
+			sourceTree = "<group>";
+		};
+		E54C3C321C6964C300C26CC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E54C3C2E1C6964BE00C26CC1 /* Post.swift */,
+				E54C3C2F1C6964BE00C26CC1 /* User.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,14 +378,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */,
+				E54C3C261C6946C800C26CC1 /* (null) in Sources */,
 				7BCDFB5A1C67C24C004C6500 /* LogInView.swift in Sources */,
 				7BD3F3361C6931DE003DFE7A /* LogInViewController.swift in Sources */,
 				7BCDFB4F1C67C032004C6500 /* ImageTableViewCell.swift in Sources */,
 				7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */,
 				7BCDFB201C67B9BE004C6500 /* ProjectInsta.xcdatamodeld in Sources */,
+				E54C3C311C6964BE00C26CC1 /* User.swift in Sources */,
+				E54C3C241C692D0F00C26CC1 /* (null) in Sources */,
 				7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */,
 				7BC961A11C67CAA0005DCD5A /* ProfileViewController.swift in Sources */,
 				7BCDFB561C67C15C004C6500 /* HomeViewController.swift in Sources */,
+				E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */,
 				7BCDFB181C67B9BE004C6500 /* AppDelegate.swift in Sources */,
 				7BD3F3341C692C17003DFE7A /* DataService.swift in Sources */,
 				7BF7653D1C695F2A00AACE88 /* TwitterAuthHelper.m in Sources */,
