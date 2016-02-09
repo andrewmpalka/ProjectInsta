@@ -13,7 +13,7 @@ import Firebase
 extension LogInViewController {
     func authWithTwitter() {
         authHelper.selectTwitterAccountWithCallback { (error, accounts) -> Void in
-            self.accounts = accounts as! [ACAccount]
+            self.accounts = accounts as? [ACAccount]
             self.handleMultipleTwitterAccounts(self.accounts)
         }
     }
@@ -26,20 +26,32 @@ extension LogInViewController {
                 // We have an authenticated Twitter user
                 NSLog("%@", authData)
                 // segue to chat
-                self.performSegueWithIdentifier("TWITTER_LOGIN", sender: authData)
+                self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: authData)
             }
         })
     }
     
     func selectTwitterAccount(accounts: [ACAccount]) {
-        var selectUserActionSheet = UIActionSheet(title: "Select Twitter Account", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Destruct", otherButtonTitles: "Other")
+        let selectUserAlertController = UIAlertController(title: "Select Twitter Account", message: "Please choose your account", preferredStyle: .ActionSheet)
+        
+        
         
         for account in accounts {
-            selectUserActionSheet.addButtonWithTitle(account.username)
+            selectUserAlertController.addAction(UIAlertAction(title: account.username, style: .Default, handler: { alertAction in
+                let currentTwitterHandle = account.username
+                for acc in accounts {
+                    if acc.username == currentTwitterHandle {
+                        self.authAccount(acc)
+                    }
+                }
+                }
+                )
+            )
+            //            selectUserActionSheet.addButtonWithTitle(account.username)
         }
-        
-        selectUserActionSheet.cancelButtonIndex = selectUserActionSheet.addButtonWithTitle("Cancel")
-        selectUserActionSheet.showInView(self.view);
+        selectUserAlertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        //        selectUserActionSheet.cancelButtonIndex = selectUserActionSheet.addButtonWithTitle("Cancel")
+        presentViewController(selectUserAlertController, animated: true, completion: nil)
     }
     
     func handleMultipleTwitterAccounts(accounts: [ACAccount]) {
@@ -53,21 +65,13 @@ extension LogInViewController {
         }
     }
     
-    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
-        let currentTwitterHandle = actionSheet.buttonTitleAtIndex(buttonIndex)
-        for acc in accounts {
-            if acc.username == currentTwitterHandle {
-                self.authAccount(acc)
-            }
-        }
-    }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-//        var messagesVc = segue.destinationViewController as! MessagesViewController
-//        if let authData = sender as? FAuthData {
-//            messagesVc.user = authData
-//            messagesVc.ref = ref
-//            messagesVc.sender = authData.providerData["username"] as! String
-//        }
-//    }
+    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    //        var messagesVc = segue.destinationViewController as! MessagesViewController
+    //        if let authData = sender as? FAuthData {
+    //            messagesVc.user = authData
+    //            messagesVc.ref = ref
+    //            messagesVc.sender = authData.providerData["username"] as! String
+    //        }
+    //    }
 }

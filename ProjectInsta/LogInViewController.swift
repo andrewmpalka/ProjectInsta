@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LogInViewController: UIViewController, UIActionSheetDelegate {
+class LogInViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -30,6 +30,10 @@ class LogInViewController: UIViewController, UIActionSheetDelegate {
         if ((NSUserDefaults.standardUserDefaults().valueForKey(KEY_ID) != nil)) {
         self.performSegueWithIdentifier("logInSegue", sender: nil)
         }
+        
+        ref = Firebase(url:"https://instagramproject.firebaseio.com/")
+        authHelper = TwitterAuthHelper(firebaseRef:ref, apiKey: "rV9QqoE4d7aYzoidVJfrvOwmy")
+
     }
     
     @IBAction func onLogInButtonTapped(sender: UIButton) {
@@ -61,8 +65,7 @@ class LogInViewController: UIViewController, UIActionSheetDelegate {
         }
     }
     @IBAction func onTwitterVerifyTapped(sender: UIButton) {
-        
-        
+               self.authWithTwitter()
     }
     func showErrorAlert(title: String, msg: String){
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
