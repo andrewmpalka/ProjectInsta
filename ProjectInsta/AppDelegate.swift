@@ -19,10 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func login() {
         
         // remember user's login
-        let username : String? = NSUserDefaults.standardUserDefaults().stringForKey("\( DataService.ds.REF_USER.authData.uid)")
-        
-        // if loged in
-        if username != nil {
+        if (NSUserDefaults.standardUserDefaults().valueForKey(KEY_ID) != nil && DataService.ds.REF_USER.authData != nil) {
             
             let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let myTabBar = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController

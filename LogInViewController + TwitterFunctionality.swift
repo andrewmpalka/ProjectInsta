@@ -28,7 +28,7 @@ extension LogInViewController {
                 NSLog("%@", authData)
                 // segue to chat
 //                self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: authData)
-                NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "\(authData.uid)")
+                NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey:KEY_ID)
                 NSUserDefaults.standardUserDefaults().synchronize()
                 
 //                let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
