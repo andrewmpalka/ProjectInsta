@@ -47,9 +47,19 @@ class LogInViewController: UIViewController {
                             if error != nil {
                                 self.showErrorAlert("You really fucked up", msg: "Do literally anything else you dumbass")
                             } else {
+                                
+                                                                
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_ID], forKey: KEY_ID)
                                 
-                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: nil)
+                                
+                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: {
+                                    err, authData in
+                                    
+                                    let user = ["provider": authData.provider!]
+                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
+                                    
+                                })
+                                
                                 self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: nil)
                             }
                             
