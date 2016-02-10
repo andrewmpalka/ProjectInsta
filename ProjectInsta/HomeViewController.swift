@@ -73,13 +73,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell
         {
+    
             cell.configureCell(post)
             return cell
         } else {
-            return PostCell()
-        }
-
+                return PostCell()
+            }
+    
     }
+
 
 
     // MARK: - Navigation

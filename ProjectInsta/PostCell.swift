@@ -14,13 +14,14 @@ class PostCell: UITableViewCell {
 //    var user: User!
     
     
+    
     func configureCell(post: Post) {
         self.post = post
         print("\(post.postDescription)")
 //        self.user = user
         
-    self.textLabel?.text = post.postDescription
 //    self.textLabel?.text = user.email
+    self.detailTextLabel!.text = post.postDescription
         //display the likes text label in here
         //self.likeslabel.text = "\(post.likes)"
     }
