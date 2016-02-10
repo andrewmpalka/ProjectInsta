@@ -43,7 +43,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" rowHeight="393" id="73E-9E-nAA" customClass="PostCell" customModule="ProjectInsta" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="73E-9E-nAA" id="5aB-3X-4Xa">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="243.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="392.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test" translatesAutoresizingMaskIntoConstraints="NO" id="qRE-hM-eDU">
@@ -341,9 +341,54 @@
                     <view key="view" contentMode="scaleToFill" id="KPZ-3H-zba">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrB-SA-oDz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Take picture"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="244" y="415" width="111" height="72"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onTakeButtonTapped:" destination="tAN-V9-u3u" eventType="touchUpInside" id="IdX-w6-LkI"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Hb-Dq-1TU">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="325"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-Ee-FkE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Choose Photo"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="45" y="415" width="111" height="72"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onChooseButtonTapped:" destination="tAN-V9-u3u" eventType="touchUpInside" id="byU-Lc-hPt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="XrB-SA-oDz"/>
+                                <exclude reference="2Hb-Dq-1TU"/>
+                                <exclude reference="oAd-Ee-FkE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="XrB-SA-oDz"/>
+                                <include reference="2Hb-Dq-1TU"/>
+                                <include reference="oAd-Ee-FkE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Qpm-6r-TVi"/>
+                    <connections>
+                        <outlet property="imageView" destination="2Hb-Dq-1TU" id="Vde-Sx-DSW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TW1-wO-ltO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -406,11 +451,11 @@
             </objects>
             <point key="canvasLocation" x="-3472.5" y="-1032"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Photo-->
         <scene sceneID="DqK-58-tKi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eeh-t1-gAB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" systemItem="favorites" id="cmv-oO-gEa"/>
+                    <tabBarItem key="tabBarItem" title="Photo" image="photoButton" id="cmv-oO-gEa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E8t-KU-q0q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -428,6 +473,7 @@
     </scenes>
     <resources>
         <image name="Test" width="296" height="170"/>
+        <image name="photoButton" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="v2V-wv-Iez"/>
