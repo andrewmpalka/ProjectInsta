@@ -14,6 +14,7 @@
 		7BC2BCF41C6AA98F00197F76 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF31C6AA98F00197F76 /* libz.tbd */; };
 		7BC2BCF61C6AA9A500197F76 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF51C6AA9A500197F76 /* SystemConfiguration.framework */; };
 		7BC2BCF81C6AA9B500197F76 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF71C6AA9B500197F76 /* libsqlite3.tbd */; };
+		7BC2BCFA1C6ABC9100197F76 /* PhotoViewController+AWSS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2BCF91C6ABC9100197F76 /* PhotoViewController+AWSS3.swift */; };
 		7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */; };
 		7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */; };
 		7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */; };
@@ -69,6 +70,7 @@
 		7BC2BCF31C6AA98F00197F76 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		7BC2BCF51C6AA9A500197F76 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7BC2BCF71C6AA9B500197F76 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7BC2BCF91C6ABC9100197F76 /* PhotoViewController+AWSS3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoViewController+AWSS3.swift"; sourceTree = "<group>"; };
 		7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */,
 				7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */,
 				7BC961A01C67CAA0005DCD5A /* ProfileViewController.swift */,
+				7BC2BCF91C6ABC9100197F76 /* PhotoViewController+AWSS3.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */,
 				7BCDFB181C67B9BE004C6500 /* AppDelegate.swift in Sources */,
 				7BC2B0F01C6A3EBD00197F76 /* LogInViewController + TwitterFunctionality.swift in Sources */,
+				7BC2BCFA1C6ABC9100197F76 /* PhotoViewController+AWSS3.swift in Sources */,
 				7BD3F3341C692C17003DFE7A /* DataService.swift in Sources */,
 				7BF7653D1C695F2A00AACE88 /* TwitterAuthHelper.m in Sources */,
 				7BD3F3381C6932D6003DFE7A /* Constants.swift in Sources */,
