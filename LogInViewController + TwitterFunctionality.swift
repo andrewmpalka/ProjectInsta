@@ -30,8 +30,13 @@ extension LogInViewController {
 //                self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: authData)
                 NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey:KEY_ID)
                 NSUserDefaults.standardUserDefaults().synchronize()
-                let user1 = ["provider": authData.provider, "twitter": "\(authData.providerData["id"]!)"	, "username": "\(authData.providerData["username"]!)"	]
-                DataService.ds.createFirebaseUser(authData.uid, user: user1)
+                print(authData.providerData.description)
+                
+                let profileData = authData.providerData["cachedUserProfile"] as! NSDictionary
+                print(profileData)
+                
+                let user = ["provider": authData.provider, "ProfilePic": "\(profileData["profile_image_url"]!)" 	, "username": "\(authData.providerData["username"]!)"	]
+                DataService.ds.createFirebaseUser(authData.uid, user: user)
                 
 //                let user = ["provider": authData.provider!, "Email":"\(email)", "username":"\(username)"]
 //                DataService.ds.createFirebaseUser(authData.uid, user: authData.providerData)
