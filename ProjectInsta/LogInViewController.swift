@@ -14,6 +14,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var usernameTextField: UITextField!
     var ref: Firebase!
     var authHelper: TwitterAuthHelper!
     var accounts: [ACAccount]!
@@ -39,7 +40,7 @@ class LogInViewController: UIViewController {
         }
     
     @IBAction func onLogInButtonTapped(sender: UIButton) {
-        if let email = emailTextField.text where emailTextField != "", let pwd = passwordTextField.text where passwordTextField.text != "" {
+        if let email = emailTextField.text where emailTextField != "", let pwd = passwordTextField.text where passwordTextField.text != "", let username = usernameTextField.text where usernameTextField != "" {
             DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { error, authData in
                 if error != nil {
                     print(error.code)
@@ -57,7 +58,7 @@ class LogInViewController: UIViewController {
                                 DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: {
                                     err, authData in
                                     
-                                    let user = ["provider": authData.provider!, "Email":"\(email)"]
+                                    let user = ["provider": authData.provider!, "Email":"\(email)", "username":"\(username)"]
                                     DataService.ds.createFirebaseUser(authData.uid, user: user)
                                     
                                     NSUserDefaults.standardUserDefaults().setObject(authData.uid, forKey:KEY_ID)

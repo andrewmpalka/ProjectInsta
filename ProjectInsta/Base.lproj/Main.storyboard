@@ -161,45 +161,62 @@
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epp-V3-ujx">
-                                <rect key="frame" x="265" y="136" width="88" height="24"/>
+                                <rect key="frame" x="248" y="136" width="88" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="152" width="88" height="24"/>
+                                    <rect key="frame" x="140" y="152" width="88" height="24"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVk-9d-k9O">
-                                <rect key="frame" x="265" y="66" width="88" height="24"/>
+                                <rect key="frame" x="248" y="66" width="88" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="82" width="88" height="24"/>
+                                    <rect key="frame" x="140" y="82" width="88" height="24"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIg-Oy-Yi4">
-                                <rect key="frame" x="243" y="238" width="98" height="30"/>
+                                <rect key="frame" x="243" y="316" width="98" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="135" y="254" width="98" height="30"/>
+                                    <rect key="frame" x="135" y="309" width="98" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="onLogInButtonTapped:" destination="uvN-VL-AZf" eventType="touchUpInside" id="Ru5-8r-Fkf"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C1U-f9-hss">
+                                <rect key="frame" x="128" y="251" width="328" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="18" y="266" width="328" height="30"/>
+                                </variation>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ny8-yi-rSl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Log in with Twitter"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="374" width="323" height="30"/>
+                                    <rect key="frame" x="23" y="403" width="323" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="onTwitterVerifyTapped:" destination="uvN-VL-AZf" eventType="touchUpInside" id="sEy-QQ-QB8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-D9-vDc">
+                                <rect key="frame" x="248" y="219" width="88" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="140" y="227" width="88" height="24"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -216,6 +233,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="ID7-Iv-Epa" id="hbT-oB-RA0"/>
                         <outlet property="passwordTextField" destination="RXR-G5-LeS" id="WQi-6d-Dol"/>
+                        <outlet property="usernameTextField" destination="C1U-f9-hss" id="OOa-ue-dzX"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="logInSegue" id="v2V-wv-Iez"/>
                     </connections>
                 </viewController>
