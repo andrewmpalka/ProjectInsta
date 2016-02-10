@@ -302,9 +302,9 @@
                     <connections>
                         <segue destination="fD9-XV-ivO" kind="relationship" relationship="viewControllers" id="Ttd-CB-T1V"/>
                         <segue destination="G6r-U6-cWF" kind="relationship" relationship="viewControllers" id="umG-54-mgW"/>
+                        <segue destination="Eeh-t1-gAB" kind="relationship" relationship="viewControllers" id="Z64-ir-V9v"/>
                         <segue destination="4SF-VQ-nIr" kind="relationship" relationship="viewControllers" id="glV-tL-iU0"/>
                         <segue destination="I1r-m5-CFb" kind="relationship" relationship="viewControllers" id="kUL-Mv-ipD"/>
-                        <segue destination="Eeh-t1-gAB" kind="relationship" relationship="viewControllers" id="Z64-ir-V9v"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m90-FH-I1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -406,11 +406,11 @@
             </objects>
             <point key="canvasLocation" x="-3472.5" y="-1032"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="DqK-58-tKi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eeh-t1-gAB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cmv-oO-gEa"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="favorites" id="cmv-oO-gEa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E8t-KU-q0q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -430,6 +430,6 @@
         <image name="Test" width="296" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yU7-6F-F77"/>
+        <segue reference="v2V-wv-Iez"/>
     </inferredMetricsTieBreakers>
 </document>

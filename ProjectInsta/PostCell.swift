@@ -22,13 +22,10 @@ class PostCell: UITableViewCell {
     
     func configureCell(post: Post) {
         self.post = post
-        print("\(post.postDescription)")
-
-        
 
     self.postDescriptionTextView!.text = post.postDescription
     self.numberOfLikesLabel.text = String(post.likes)
-//    self.numberOfLikesLabel.text = "0"
+
     }
     
 }
