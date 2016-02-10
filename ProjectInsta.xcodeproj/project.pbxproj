@@ -42,6 +42,7 @@
 		E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C2E1C6964BE00C26CC1 /* Post.swift */; };
 		E54C3C311C6964BE00C26CC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C2F1C6964BE00C26CC1 /* User.swift */; };
 		E597B6171C6AACDB007B8134 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E597B6161C6AACDB007B8134 /* PostCell.swift */; };
+		E597B6191C6BA5A2007B8134 /* PostImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E597B6181C6BA5A2007B8134 /* PostImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		E54C3C2E1C6964BE00C26CC1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E54C3C2F1C6964BE00C26CC1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E597B6161C6AACDB007B8134 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		E597B6181C6BA5A2007B8134 /* PostImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				E597B6161C6AACDB007B8134 /* PostCell.swift */,
+				E597B6181C6BA5A2007B8134 /* PostImage.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				7BCDFB5A1C67C24C004C6500 /* LogInView.swift in Sources */,
 				7BD3F3361C6931DE003DFE7A /* LogInViewController.swift in Sources */,
 				7BCDFB4F1C67C032004C6500 /* ImageTableViewCell.swift in Sources */,
+				E597B6191C6BA5A2007B8134 /* PostImage.swift in Sources */,
 				7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */,
 				7BCDFB201C67B9BE004C6500 /* ProjectInsta.xcdatamodeld in Sources */,
 				E54C3C311C6964BE00C26CC1 /* User.swift in Sources */,
