@@ -21,6 +21,7 @@ class LogInViewController: UIViewController {
     var account = ACAccount()
     var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
       var window: UIWindow?
+    var auth: FAuthData! 
     
     override func viewDidLoad() {
         super.viewDidLoad()

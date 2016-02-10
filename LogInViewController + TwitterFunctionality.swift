@@ -14,7 +14,7 @@ extension LogInViewController {
     func authWithTwitter() {
         authHelper.selectTwitterAccountWithCallback { (error, accounts) -> Void in
             self.accounts = accounts as? [ACAccount]
-            self.selectTwitterAccount(self.accounts)
+//            self.selectTwitterAccount(self.accounts)
             self.handleMultipleTwitterAccounts(self.accounts)
         }
     }
@@ -30,7 +30,18 @@ extension LogInViewController {
 //                self.performSegueWithIdentifier(LOG_IN_SEGUE, sender: authData)
                 NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey:KEY_ID)
                 NSUserDefaults.standardUserDefaults().synchronize()
+                let user1 = ["provider": authData.provider, "twitter": "\(authData.providerData["id"]!)"	, "username": "\(authData.providerData["username"]!)"	]
+                DataService.ds.createFirebaseUser(authData.uid, user: user1)
                 
+//                let user = ["provider": authData.provider!, "Email":"\(email)", "username":"\(username)"]
+//                DataService.ds.createFirebaseUser(authData.uid, user: authData.providerData)
+
+                
+//
+//                DataService.ds.REF_BASE.authWithOAuthProvider(authHelper.account, token: authHelper.apiKey, withCompletionBlock: { error, authData in
+//                    
+//                })
+//                
 //                let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 self.appDelegate.login()
             }
@@ -64,6 +75,7 @@ extension LogInViewController {
             UIApplication.sharedApplication().openURL(NSURL(string: "https://twitter.com/signup")!)
         case 1:
             self.authAccount(accounts[0])
+            
         default:
             self.selectTwitterAccount(accounts)
         }
