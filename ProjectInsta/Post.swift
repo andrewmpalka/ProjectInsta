@@ -19,7 +19,7 @@ class Post {
     //    var timeStamp: String
     
     init(description: String?, imageURL: String, username: String) {
-        self.postDescription = description!
+        self.postDescription = description! 
         self.imageURL = imageURL
         self.username = username
         self.comment = NSMutableArray()

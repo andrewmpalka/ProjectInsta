@@ -19,6 +19,7 @@ class User: NSObject {
     var posts: NSMutableArray?
     var username: String?
     var userKey: String?
+    var email: String?
     
     init(biography: String?, userID: String, username: String, followers: NSMutableArray, following: NSMutableArray, posts: NSMutableArray) {
         self.biography = biography!
@@ -45,6 +46,9 @@ class User: NSObject {
         }
         if let biography = dictionary["description"] as? String {
             self.biography = biography
+        }
+        if let email = dictionary["Email"] as? String {
+            self.email = email
         }
     }
     

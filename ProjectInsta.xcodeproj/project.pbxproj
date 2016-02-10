@@ -35,6 +35,7 @@
 		E54C3C261C6946C800C26CC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C2E1C6964BE00C26CC1 /* Post.swift */; };
 		E54C3C311C6964BE00C26CC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C3C2F1C6964BE00C26CC1 /* User.swift */; };
+		E597B6171C6AACDB007B8134 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E597B6161C6AACDB007B8134 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		7BF7653E1C695FD500AACE88 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E54C3C2E1C6964BE00C26CC1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E54C3C2F1C6964BE00C26CC1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E597B6161C6AACDB007B8134 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		7BCDFB161C67B9BE004C6500 /* ProjectInsta */ = {
 			isa = PBXGroup;
 			children = (
+				E597B6151C6AACC4007B8134 /* View */,
 				E54C3C321C6964C300C26CC1 /* Models */,
 				7BD3F3321C692C01003DFE7A /* Services & Utilities */,
 				7BCDFB5C1C67C270004C6500 /* Core Data + AppDelegate */,
@@ -257,6 +260,14 @@
 				E54C3C2F1C6964BE00C26CC1 /* User.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E597B6151C6AACC4007B8134 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E597B6161C6AACDB007B8134 /* PostCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		F3E415340535BD433C5296DD /* Pods */ = {
@@ -467,6 +478,7 @@
 				7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */,
 				7BC961A11C67CAA0005DCD5A /* ProfileViewController.swift in Sources */,
 				7BCDFB561C67C15C004C6500 /* HomeViewController.swift in Sources */,
+				E597B6171C6AACDB007B8134 /* PostCell.swift in Sources */,
 				E54C3C301C6964BE00C26CC1 /* Post.swift in Sources */,
 				7BCDFB181C67B9BE004C6500 /* AppDelegate.swift in Sources */,
 				7BC2B0F01C6A3EBD00197F76 /* LogInViewController + TwitterFunctionality.swift in Sources */,

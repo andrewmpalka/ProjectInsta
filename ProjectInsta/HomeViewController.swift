@@ -49,6 +49,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         let uKey = snap.key
                         let user = User(userKey: uKey, dictionary: userDictionary)
                         self.users.append(user)
+                        print(self.users)
+                    
                     }
                 }
             }
@@ -66,13 +68,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = (tableView.dequeueReusableCellWithIdentifier("CellID"))
         let post = posts[indexPath.row]
 //        let user = users[indexPath.row]
-//        cell?.textLabel?.text = user.username
-        cell?.detailTextLabel?.text = post.postDescription
-        print(post.postDescription)
-        return cell!
+        
+        if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell
+        {
+            cell.configureCell(post)
+            return cell
+        } else {
+            return PostCell()
+        }
+
     }
 
 
