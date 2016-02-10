@@ -10,6 +10,7 @@ import UIKit
 
 class PostCell: UITableViewCell {
     
+
     var post: Post!
 //    var user: User!
     
@@ -20,10 +21,17 @@ class PostCell: UITableViewCell {
         print("\(post.postDescription)")
 //        self.user = user
         
-//    self.textLabel?.text = user.email
+    self.textLabel?.text = "Test"
     self.detailTextLabel!.text = post.postDescription
         //display the likes text label in here
         //self.likeslabel.text = "\(post.likes)"
     }
+    
+    
+    
+//    override func layoutSubviews() {
+//    super.layoutSubviews
+//    self.imageView!.frame = CGRectMake(0,0,32,32)
+//    }
 }
 
