@@ -12,15 +12,29 @@ import Firebase
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
 
-    var imagePicker: UIImagePickerController!
+    @IBOutlet weak var captionTextView: UITextView!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var choosePhoto: UIButton!
+    @IBOutlet weak var takePicture: UIButton!
+
+ 
     
+    
+    var imagePicker: UIImagePickerController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        captionTextView.hidden = true
+        shareButton.hidden = true
+        captionTextView.editable = false
+        shareButton.enabled = false
+        
     
     }
-
     
     
     @IBAction func onChooseButtonTapped(sender: AnyObject) {
@@ -53,10 +67,30 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
    
     
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    
+    
+    
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        captionTextView.hidden = false
+        shareButton.hidden = false
+        captionTextView.editable = true
+        shareButton.enabled = true
+        choosePhoto.enabled = false
+        choosePhoto.hidden = true
+        takePicture.hidden = true
+        takePicture.enabled = false
     }
+    
+        
+        
+    
 
+//    @IBAction func onShareButtonTapped(sender: AnyObject) {
+//        
+//        var post: Dictionary<String, AnyObject> = [
+//    }
     
 
     /*

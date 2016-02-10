@@ -346,7 +346,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Take picture"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="244" y="415" width="111" height="72"/>
+                                    <rect key="frame" x="244" y="479" width="111" height="72"/>
                                 </variation>
                                 <connections>
                                     <action selector="onTakeButtonTapped:" destination="tAN-V9-u3u" eventType="touchUpInside" id="IdX-w6-LkI"/>
@@ -362,12 +362,32 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Choose Photo"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="45" y="415" width="111" height="72"/>
+                                    <rect key="frame" x="45" y="479" width="111" height="72"/>
                                 </variation>
                                 <connections>
                                     <action selector="onChooseButtonTapped:" destination="tAN-V9-u3u" eventType="touchUpInside" id="byU-Lc-hPt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujh-F0-fL2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="119" y="507" width="163" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onShareButtonTapped:" destination="tAN-V9-u3u" eventType="touchUpInside" id="QyZ-dr-vF8"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write a caption" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XoJ-Qs-fX5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="58" y="407" width="284" height="73"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -375,6 +395,8 @@
                                 <exclude reference="XrB-SA-oDz"/>
                                 <exclude reference="2Hb-Dq-1TU"/>
                                 <exclude reference="oAd-Ee-FkE"/>
+                                <exclude reference="ujh-F0-fL2"/>
+                                <exclude reference="XoJ-Qs-fX5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -382,12 +404,18 @@
                                 <include reference="XrB-SA-oDz"/>
                                 <include reference="2Hb-Dq-1TU"/>
                                 <include reference="oAd-Ee-FkE"/>
+                                <include reference="ujh-F0-fL2"/>
+                                <include reference="XoJ-Qs-fX5"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Qpm-6r-TVi"/>
                     <connections>
+                        <outlet property="captionTextView" destination="XoJ-Qs-fX5" id="LAj-aT-QFF"/>
+                        <outlet property="choosePhoto" destination="oAd-Ee-FkE" id="oa8-S6-mC6"/>
                         <outlet property="imageView" destination="2Hb-Dq-1TU" id="Vde-Sx-DSW"/>
+                        <outlet property="shareButton" destination="ujh-F0-fL2" id="mr2-Nh-9GF"/>
+                        <outlet property="takePicture" destination="XrB-SA-oDz" id="BUZ-fS-6Il"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TW1-wO-ltO" userLabel="First Responder" sceneMemberID="firstResponder"/>
