@@ -10,7 +10,9 @@ import UIKit
 import Firebase
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
     @IBOutlet weak var tableView: UITableView!
+
     var posts = [Post]()
     var users = [User]()
     
@@ -92,5 +94,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Pass the selected object to the new view controller.
     }
 
+    
 
 }

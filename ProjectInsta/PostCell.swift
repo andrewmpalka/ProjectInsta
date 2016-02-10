@@ -10,28 +10,26 @@ import UIKit
 
 class PostCell: UITableViewCell {
     
-
+    @IBOutlet weak var postDescriptionTextView: UITextView!
+    
+    @IBOutlet weak var commentsTextView: UITextView!
+    @IBOutlet weak var likesImage: UIImageView!
+    @IBOutlet weak var numberOfLikesLabel: UILabel!
     var post: Post!
-//    var user: User!
+    var user: User!
     
     
     
     func configureCell(post: Post) {
         self.post = post
         print("\(post.postDescription)")
-//        self.user = user
+
         
-    self.textLabel?.text = "Test"
-    self.detailTextLabel!.text = post.postDescription
-        //display the likes text label in here
-        //self.likeslabel.text = "\(post.likes)"
+
+    self.postDescriptionTextView!.text = post.postDescription
+    self.numberOfLikesLabel.text = String(post.likes)
+//    self.numberOfLikesLabel.text = "0"
     }
     
-    
-    
-//    override func layoutSubviews() {
-//    super.layoutSubviews
-//    self.imageView!.frame = CGRectMake(0,0,32,32)
-//    }
 }
 
