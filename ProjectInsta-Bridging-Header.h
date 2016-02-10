@@ -5,4 +5,6 @@
 
 #import <Firebase/Firebase.h>
 #import "TwitterAuthHelper.h"
+#import <AWSCore/AWSCore.h>
+#import <AWSS3/AWSS3.h>
 
