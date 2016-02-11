@@ -12,6 +12,7 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var postDescriptionTextView: UITextView!
     
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var commentsTextView: UITextView!
     @IBOutlet weak var likesImage: UIImageView!
     @IBOutlet weak var numberOfLikesLabel: UILabel!
@@ -25,6 +26,7 @@ class PostCell: UITableViewCell {
 
     self.postDescriptionTextView!.text = post.postDescription
     self.numberOfLikesLabel.text = String(post.likes)
+    self.usernameLabel.text = post.postCreator
 
     }
     

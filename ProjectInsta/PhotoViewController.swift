@@ -18,7 +18,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var takePicture: UIButton!
 
  
-    
+    var post: Post!
     
     var imagePicker: UIImagePickerController!
 
@@ -95,12 +95,27 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         let image = imageView.image
         self.uploadImage(image!, key: timeString)
         
+//        let postCreator = Firebase(url: "\(REF_USER_CURRENT)").childByAppendingPath("Email")
+        
+        var postCreatorRoot = Firebase(url: "https://instagramproject.firebaseio.com/")
+        var postCreatorURL = postCreatorRoot.childByAppendingPath("user")
+        var postCreatorEmail = postCreatorURL.childByAppendingPath("Email")
+//        var 
+        
+        
         let post: Dictionary<String, AnyObject> = [
         "description": captionTextView.text,
         "likes": 0,
-        "timeStamp": timeString
+        "timeStamp": timeString,
+        "postCreator": postCreatorEmail
         
         ]
+        
+        
+        
+//        self.post.postCreator = postCreator
+
+        
         let fbPost = DataService.ds.REF_POST.childByAutoId()
         fbPost.setValue(post)
         self.captionTextView.text = ""
