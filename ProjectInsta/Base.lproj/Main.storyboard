@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uvN-VL-AZf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uvN-VL-AZf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Profile View Controller-->
@@ -85,6 +85,15 @@
                                                         <rect key="frame" x="20" y="332" width="349" height="43.5"/>
                                                     </variation>
                                                 </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8o-oG-FwI">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="15" y="8" width="153" height="27"/>
+                                                    </variation>
+                                                </label>
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -93,6 +102,7 @@
                                                     <exclude reference="SW1-KU-QSR"/>
                                                     <exclude reference="ESq-CQ-re2"/>
                                                     <exclude reference="DJl-tG-uUf"/>
+                                                    <exclude reference="C8o-oG-FwI"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -102,6 +112,7 @@
                                                     <include reference="SW1-KU-QSR"/>
                                                     <include reference="ESq-CQ-re2"/>
                                                     <include reference="DJl-tG-uUf"/>
+                                                    <include reference="C8o-oG-FwI"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -110,6 +121,7 @@
                                             <outlet property="likesImage" destination="ESq-CQ-re2" id="Lks-4d-h6J"/>
                                             <outlet property="numberOfLikesLabel" destination="SW1-KU-QSR" id="vse-qJ-pj6"/>
                                             <outlet property="postDescriptionTextView" destination="igW-Wr-Roe" id="cye-PH-Jgj"/>
+                                            <outlet property="usernameLabel" destination="C8o-oG-FwI" id="yKh-Gf-eMp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
