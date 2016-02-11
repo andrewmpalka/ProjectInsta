@@ -73,7 +73,7 @@ class LogInViewController: UIViewController {
                             }
                         )}
                 } else {
-                    NSUserDefaults.standardUserDefaults().setObject(authData.uid, forKey: "\(authData.uid)")
+                    NSUserDefaults.standardUserDefaults().setObject(authData.uid, forKey: "\(KEY_ID)")
                     NSUserDefaults.standardUserDefaults().synchronize()
 //                    let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                     self.appDelegate.login()

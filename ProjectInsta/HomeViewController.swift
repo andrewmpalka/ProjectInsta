@@ -9,17 +9,32 @@
 import UIKit
 import Firebase
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+
 
     @IBOutlet weak var tableView: UITableView!
-
+    
     var posts = [Post]()
     var users = [User]()
+    var post = Post!()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-
+        
+//        var REF_USER_CURRENT: Firebase {
+//            let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_ID) as! String
+//            let user = Firebase(url: "\(URL_BASE)").childByAppendingPath("user").childByAppendingPath(uid)
+//            return user
+//        }
+//        
+//        REF_USER_CURRENT.childByAppendingPath("Email").observeSingleEventOfType(.Value, withBlock: { snapshot in
+//            print(self.post)
+//            print(snapshot.value)
+//            self.post.postCreator = "test"
+//            
+//        })
+        
+        
+        
         
         DataService.ds.REF_POST.observeEventType(.Value, withBlock: { snapshot in
             self.posts = []

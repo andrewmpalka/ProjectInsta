@@ -21,6 +21,7 @@ class PostCell: UITableViewCell {
     
     
     
+    
     func configureCell(post: Post) {
         self.post = post
 

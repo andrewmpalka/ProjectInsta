@@ -16,8 +16,16 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var choosePhoto: UIButton!
     @IBOutlet weak var takePicture: UIButton!
+    
+    var REF_USER_CURRENT: Firebase {
+        let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_ID) as! String
+        let user = Firebase(url: "\(URL_BASE)").childByAppendingPath("user").childByAppendingPath(uid)
+        return user
+    }
+    
 
- 
+    var thePostOwner: String?
+    var postCreator: String?
     var post: Post!
     
     var imagePicker: UIImagePickerController!
@@ -68,9 +76,9 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-    
-    
-    
+        
+        
+        
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         captionTextView.hidden = false
@@ -83,37 +91,52 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         takePicture.enabled = false
     }
     
-        
-        
     
-
+    
+    var timeString: String {
+        return "\(NSDate().timeIntervalSince1970 * 1000)"
+    }
+    
     @IBAction func onShareButtonTapped(sender: AnyObject) {
-        var timeString: String {
-            return "\(NSDate().timeIntervalSince1970 * 1000)"
-        }
+       
         
         let image = imageView.image
         self.uploadImage(image!, key: timeString)
         
-//        let postCreator = Firebase(url: "\(REF_USER_CURRENT)").childByAppendingPath("Email")
         
-        var postCreatorRoot = Firebase(url: "https://instagramproject.firebaseio.com/")
-        var postCreatorURL = postCreatorRoot.childByAppendingPath("user")
-        var postCreatorEmail = postCreatorURL.childByAppendingPath("Email")
-//        var 
+        var REF_USER_CURRENT: Firebase {
+            let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_ID) as! String
+            let user = Firebase(url: "\(URL_BASE)").childByAppendingPath("user").childByAppendingPath(uid)
+            return user
+        }
+       
+        
+        REF_USER_CURRENT.childByAppendingPath("Email").observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            
+            print(snapshot.value)
+            print(snapshot.key)
+            self.postCreator = snapshot.value as? String
+            self.sendPostToFirebase()
+        })
         
         
+         
+//        let postCreatorURL = REF_USER_CURRENT.childByAppendingPath("Email")
+//        let postCreator = String(postCreatorURL)
+
+    }
+        func sendPostToFirebase() {
         let post: Dictionary<String, AnyObject> = [
-        "description": captionTextView.text,
-        "likes": 0,
-        "timeStamp": timeString,
-        "postCreator": postCreatorEmail
+            "description": captionTextView.text,
+            "likes": 0,
+            "timeStamp": timeString,
+            "postCreator": postCreator!
         
         ]
         
         
         
-//        self.post.postCreator = postCreator
 
         
         let fbPost = DataService.ds.REF_POST.childByAutoId()
