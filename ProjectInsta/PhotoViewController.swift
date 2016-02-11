@@ -92,11 +92,14 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
             return "\(NSDate().timeIntervalSince1970 * 1000)"
         }
         
+        let image = imageView.image
+        self.uploadImage(image!, key: timeString)
+        
         let post: Dictionary<String, AnyObject> = [
         "description": captionTextView.text,
         "likes": 0,
-        "imageUrl": "google.com",
         "timeStamp": timeString
+        
         ]
         let fbPost = DataService.ds.REF_POST.childByAutoId()
         fbPost.setValue(post)
