@@ -29,9 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
             let myTabBar = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
             window?.rootViewController = myTabBar
         }
-        
     }
-
+    func logOut() {
+        NSUserDefaults.standardUserDefaults().setNilValueForKey(KEY_ID)
+    }
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,

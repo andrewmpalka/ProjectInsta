@@ -24,7 +24,8 @@ extension PhotoViewController {
         uploadRequest1.body = testFileURL1
         
         let task = transferManager.upload(uploadRequest1)
-        task.continueWithBlock { fuckitiwantsomething in
+
+        task.continueWithBlock { _ in
             if task.error != nil {
                 print("Error: \(task.error)")
             } else {
