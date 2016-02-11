@@ -16,8 +16,7 @@ class ActivityViewController: UIViewController {
         super.viewDidLoad()
         print("HERE")
         let photoDownloader = PhotoDownloader()
-        let string = "1455153714649.47"
-        photoDownloader.downloadImageForImageView(string, view: imageView)
+//        photoDownloader.downloadImageForImageView(string, view: imageView)
         // Do any additional setup after loading the view.
     }
 

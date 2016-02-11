@@ -17,6 +17,7 @@
 		7BC2BCFA1C6ABC9100197F76 /* PhotoViewController+AWSS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2BCF91C6ABC9100197F76 /* PhotoViewController+AWSS3.swift */; };
 		7BC2BD001C6C012400197F76 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCFF1C6C012400197F76 /* AWSCognito.framework */; };
 		7BC2BD021C6C268100197F76 /* PhotoDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2BD011C6C268100197F76 /* PhotoDownloader.swift */; };
+		7BC2BD081C6D180B00197F76 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2BD071C6D180B00197F76 /* Cache.swift */; };
 		7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */; };
 		7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */; };
 		7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */; };
@@ -77,6 +78,7 @@
 		7BC2BCF91C6ABC9100197F76 /* PhotoViewController+AWSS3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoViewController+AWSS3.swift"; sourceTree = "<group>"; };
 		7BC2BCFF1C6C012400197F76 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognito.framework; sourceTree = "<group>"; };
 		7BC2BD011C6C268100197F76 /* PhotoDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDownloader.swift; sourceTree = "<group>"; };
+		7BC2BD071C6D180B00197F76 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			children = (
 				7BD3F3331C692C17003DFE7A /* DataService.swift */,
 				7BD3F3371C6932D6003DFE7A /* Constants.swift */,
+				7BC2BD071C6D180B00197F76 /* Cache.swift */,
 			);
 			name = "Services & Utilities";
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC2BD081C6D180B00197F76 /* Cache.swift in Sources */,
 				7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */,
 				E54C3C261C6946C800C26CC1 /* (null) in Sources */,
 				7BCDFB5A1C67C24C004C6500 /* LogInView.swift in Sources */,
