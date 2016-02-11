@@ -87,10 +87,14 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
     
 
-//    @IBAction func onShareButtonTapped(sender: AnyObject) {
-//        
-//        var post: Dictionary<String, AnyObject> = [
-//    }
+    @IBAction func onShareButtonTapped(sender: AnyObject) {
+        // placeholderUploadFunc
+        let image = imageView.image
+        let urlString = self.getURLStringFromImage(image!)
+        
+        
+//        var post: Dictionary<String, AnyObject> = []
+    }
     
 
     /*

@@ -15,6 +15,7 @@
 		7BC2BCF61C6AA9A500197F76 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF51C6AA9A500197F76 /* SystemConfiguration.framework */; };
 		7BC2BCF81C6AA9B500197F76 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCF71C6AA9B500197F76 /* libsqlite3.tbd */; };
 		7BC2BCFA1C6ABC9100197F76 /* PhotoViewController+AWSS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2BCF91C6ABC9100197F76 /* PhotoViewController+AWSS3.swift */; };
+		7BC2BD001C6C012400197F76 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2BCFF1C6C012400197F76 /* AWSCognito.framework */; };
 		7BC9619B1C67CA72005DCD5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */; };
 		7BC9619D1C67CA7F005DCD5A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */; };
 		7BC9619F1C67CA95005DCD5A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */; };
@@ -73,6 +74,7 @@
 		7BC2BCF51C6AA9A500197F76 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7BC2BCF71C6AA9B500197F76 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7BC2BCF91C6ABC9100197F76 /* PhotoViewController+AWSS3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoViewController+AWSS3.swift"; sourceTree = "<group>"; };
+		7BC2BCFF1C6C012400197F76 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognito.framework; sourceTree = "<group>"; };
 		7BC9619A1C67CA72005DCD5A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7BC9619C1C67CA7F005DCD5A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		7BC9619E1C67CA95005DCD5A /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				7BC2BCF81C6AA9B500197F76 /* libsqlite3.tbd in Frameworks */,
 				7BC2BCF61C6AA9A500197F76 /* SystemConfiguration.framework in Frameworks */,
 				7BC2BCF41C6AA98F00197F76 /* libz.tbd in Frameworks */,
+				7BC2BD001C6C012400197F76 /* AWSCognito.framework in Frameworks */,
 				7BF7653F1C695FD500AACE88 /* Social.framework in Frameworks */,
 				7BC2BCF11C6AA81600197F76 /* AWSCore.framework in Frameworks */,
 				7BCDFB491C67B9EE004C6500 /* MapKit.framework in Frameworks */,
@@ -158,6 +161,7 @@
 		7BCDFB0B1C67B9BD004C6500 = {
 			isa = PBXGroup;
 			children = (
+				7BC2BCFF1C6C012400197F76 /* AWSCognito.framework */,
 				7BF7653E1C695FD500AACE88 /* Social.framework */,
 				7BCDFB481C67B9EE004C6500 /* MapKit.framework */,
 				7BCDFB161C67B9BE004C6500 /* ProjectInsta */,
@@ -656,6 +660,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ProjectInsta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MobileMakers.ProjectInsta;
@@ -674,6 +682,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ProjectInsta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MobileMakers.ProjectInsta;

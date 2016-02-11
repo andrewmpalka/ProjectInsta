@@ -11,6 +11,7 @@ import CoreData
 import Firebase
 import AWSCore
 import AWSS3
+import AWSCognito
 
 
 
@@ -33,10 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-//        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
-//        let configuration = AWSServiceConfiguration(region: DefaultServiceRegionType, credentialsProvider: credentialsProvider)
-//        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
-
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+            identityPoolId:"us-east-1:e3b640d5-49e2-4a80-a776-f0a8ff29b6b0")
+        
+        let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
 //                              either / or
         
 //        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
