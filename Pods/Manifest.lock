@@ -1,0 +1,17 @@
+PODS:
+  - AWSCore (2.3.4)
+  - AWSS3 (2.3.4):
+    - AWSCore (= 2.3.4)
+  - Firebase (2.5.0)
+
+DEPENDENCIES:
+  - AWSCore
+  - AWSS3
+  - Firebase (>= 2.5.0)
+
+SPEC CHECKSUMS:
+  AWSCore: 926eb781459b58d4319b0fa4f5f3bffb6b28b112
+  AWSS3: f49fde807d6cfc373f1bdb8150c9770d470ca2fd
+  Firebase: 744617c0733b45198f9486ebd5cac64ec2d10d79
+
+COCOAPODS: 0.39.0
