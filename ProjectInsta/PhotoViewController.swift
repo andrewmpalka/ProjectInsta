@@ -87,10 +87,32 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
     
 
-//    @IBAction func onShareButtonTapped(sender: AnyObject) {
-//        
-//        var post: Dictionary<String, AnyObject> = [
-//    }
+    @IBAction func onShareButtonTapped(sender: AnyObject) {
+        var timeString: String {
+            return "\(NSDate().timeIntervalSince1970 * 1000)"
+        }
+        
+        let post: Dictionary<String, AnyObject> = [
+        "description": captionTextView.text,
+        "likes": 0,
+        "imageUrl": "google.com",
+        "timeStamp": timeString
+        ]
+        let fbPost = DataService.ds.REF_POST.childByAutoId()
+        fbPost.setValue(post)
+        self.captionTextView.text = ""
+        self.imageView.image = nil
+        captionTextView.hidden = true
+        shareButton.hidden = true
+        captionTextView.editable = false
+        shareButton.enabled = false
+        choosePhoto.enabled = true
+        choosePhoto.hidden = false
+        takePicture.hidden = false
+        takePicture.enabled = true
+        
+        
+    }
     
 
     /*

@@ -16,13 +16,15 @@ class Post {
     var comment: NSMutableArray!
     var postKey: String?
     var username: String?
+    var timeStamp: String?
     //    var timeStamp: String
     
-    init(description: String?, imageURL: String, username: String) {
+    init(description: String?, imageURL: String, username: String, timeStamp: String) {
         self.postDescription = description! 
         self.imageURL = imageURL
         self.username = username
         self.comment = NSMutableArray()
+        self.timeStamp = timeStamp
         
         
     }
