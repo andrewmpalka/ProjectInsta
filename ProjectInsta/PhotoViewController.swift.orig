@@ -88,6 +88,14 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
 
     @IBAction func onShareButtonTapped(sender: AnyObject) {
+<<<<<<< HEAD
+        // placeholderUploadFunc
+        let image = imageView.image
+        let urlString = self.getURLStringFromImage(image!)
+        
+        
+//        var post: Dictionary<String, AnyObject> = []
+=======
         var timeString: String {
             return "\(NSDate().timeIntervalSince1970 * 1000)"
         }
@@ -112,6 +120,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         takePicture.enabled = true
         
         
+>>>>>>> b5c8e10aa4d27bd667649d0f93d51406c55e883f
     }
     
 

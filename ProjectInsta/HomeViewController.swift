@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     if let postDictionary = snap.value as? (Dictionary<String, AnyObject>) {
                         let key = snap.key
                         let post = Post(postKey: key, dictionary: postDictionary)
-                        self.posts.append(post)
+                        self.posts.insert(post, atIndex: 0)
                     }
                 }
             }
@@ -51,7 +51,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         let uKey = snap.key
                         let user = User(userKey: uKey, dictionary: userDictionary)
                         self.users.append(user)
-                        print(self.users)
                     
                     }
                 }
