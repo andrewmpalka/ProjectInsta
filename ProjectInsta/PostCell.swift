@@ -27,7 +27,7 @@ class PostCell: UITableViewCell {
 
     self.postDescriptionTextView!.text = post.postDescription
     self.numberOfLikesLabel.text = String(post.likes)
-    self.usernameLabel.text = post.postCreator
+    self.usernameLabel.text = String(post.postCreator)
 
     }
     

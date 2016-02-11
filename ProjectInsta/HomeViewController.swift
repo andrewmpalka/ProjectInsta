@@ -20,21 +20,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        var REF_USER_CURRENT: Firebase {
-//            let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_ID) as! String
-//            let user = Firebase(url: "\(URL_BASE)").childByAppendingPath("user").childByAppendingPath(uid)
-//            return user
-//        }
-//        
-//        REF_USER_CURRENT.childByAppendingPath("Email").observeSingleEventOfType(.Value, withBlock: { snapshot in
-//            print(self.post)
-//            print(snapshot.value)
-//            self.post.postCreator = "test"
-//            
-//        })
-        
-        
-        
         
         DataService.ds.REF_POST.observeEventType(.Value, withBlock: { snapshot in
             self.posts = []
@@ -47,6 +32,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         let key = snap.key
                         let post = Post(postKey: key, dictionary: postDictionary)
                         self.posts.insert(post, atIndex: 0)
+                    
                     }
                 }
             }

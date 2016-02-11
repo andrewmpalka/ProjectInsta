@@ -38,4 +38,7 @@ class DataService {
     func createFireBasePost(uid:String, post: Dictionary<String, AnyObject>) {
         REF_POST.childByAppendingPath(uid).setValue(post)
     }
+    func whoIsUser(uid:String) {
+        REF_POST.childByAppendingPath(uid).childByAppendingPath("postCreator")
+    }
 }
