@@ -11,7 +11,7 @@ import AWSS3
 
 extension PhotoViewController {
         //MARK: S3 stuff
-    func getURLStringFromImage(image: UIImage) {
+    func uploadImage(image: UIImage, key: NSString) {
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
         let path = NSTemporaryDirectory().stringByAppendingString("temp")
         let testFileURL1 = NSURL(fileURLWithPath: path)
@@ -20,9 +20,8 @@ extension PhotoViewController {
         let data = UIImageJPEGRepresentation(image, 0.5)
         data!.writeToURL(testFileURL1, atomically: true)
         uploadRequest1.bucket = "projectinstant.bucket"
-        uploadRequest1.key =  "image"
+        uploadRequest1.key =  key as String
         uploadRequest1.body = testFileURL1
-        testFileURL1.pathExtension
         
         let task = transferManager.upload(uploadRequest1)
         task.continueWithBlock { fuckitiwantsomething in
@@ -34,6 +33,7 @@ extension PhotoViewController {
             }
             return nil
         }
+      
     }
 //    let uploadRequest = AWS
 //        func uploadToS3(){
