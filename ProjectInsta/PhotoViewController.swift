@@ -111,7 +111,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
        
         
-        REF_USER_CURRENT.childByAppendingPath("Email").observeSingleEventOfType(.Value, withBlock: { snapshot in
+        REF_USER_CURRENT.childByAppendingPath("username").observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             
             print(snapshot.value)
