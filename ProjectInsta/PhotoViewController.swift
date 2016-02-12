@@ -68,6 +68,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+        imagePicker.sourceType = .Camera
         presentViewController(imagePicker, animated: true, completion: nil)
         }
         else {

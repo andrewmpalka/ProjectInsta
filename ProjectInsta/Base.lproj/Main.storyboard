@@ -293,13 +293,6 @@
                                     <constraint firstAttribute="height" constant="128" id="IJH-ei-tOZ"/>
                                 </constraints>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3YH-u6-NL8">
-                                <rect key="frame" x="0.0" y="643" width="414" height="44"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <barButtonItem title="Item" id="Obc-Xv-Oi5"/>
-                                </items>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gox-7W-Tzf">
                                 <rect key="frame" x="0.0" y="200" width="414" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -312,17 +305,32 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3YH-u6-NL8">
+                                <rect key="frame" x="0.0" y="643" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem title="Item" id="Obc-Xv-Oi5"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3YH-u6-NL8" firstAttribute="leading" secondItem="Gox-7W-Tzf" secondAttribute="leading" id="39Y-8H-b0S"/>
                             <constraint firstItem="3YH-u6-NL8" firstAttribute="trailing" secondItem="Gox-7W-Tzf" secondAttribute="trailing" id="5Uo-2e-RCy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3YH-u6-NL8" secondAttribute="trailing" constant="-20" id="GQI-WN-JzI"/>
+                            <constraint firstItem="3YH-u6-NL8" firstAttribute="leading" secondItem="cUg-TW-Qzu" secondAttribute="leadingMargin" constant="-20" id="HYP-4H-YBb"/>
+                            <constraint firstItem="3YH-u6-NL8" firstAttribute="leading" secondItem="cUg-TW-Qzu" secondAttribute="leadingMargin" constant="-20" id="Ifm-6x-x9L"/>
                             <constraint firstItem="Kqc-ZR-rOt" firstAttribute="leading" secondItem="cUg-TW-Qzu" secondAttribute="leadingMargin" constant="-20" id="K0C-mz-uAK"/>
                             <constraint firstItem="3YH-u6-NL8" firstAttribute="top" secondItem="Gox-7W-Tzf" secondAttribute="bottom" id="Qsn-Ww-uk4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kqc-ZR-rOt" secondAttribute="trailing" constant="-20" id="S9M-Qz-brM"/>
+                            <constraint firstItem="3YH-u6-NL8" firstAttribute="top" secondItem="Gox-7W-Tzf" secondAttribute="bottom" id="TxV-qD-goD"/>
+                            <constraint firstItem="3YH-u6-NL8" firstAttribute="top" secondItem="Gox-7W-Tzf" secondAttribute="bottom" id="UIV-3C-7I4"/>
                             <constraint firstItem="Kqc-ZR-rOt" firstAttribute="top" secondItem="3xk-pa-REw" secondAttribute="bottom" id="eTb-mW-r0C"/>
                             <constraint firstItem="Gox-7W-Tzf" firstAttribute="leading" secondItem="cUg-TW-Qzu" secondAttribute="leadingMargin" constant="-20" id="iY9-R5-nwJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3YH-u6-NL8" secondAttribute="trailing" constant="-20" id="jrf-zD-1KB"/>
                             <constraint firstItem="3YH-u6-NL8" firstAttribute="bottom" secondItem="Ea4-ux-buz" secondAttribute="top" id="k33-Ix-GOI"/>
+                            <constraint firstItem="Ea4-ux-buz" firstAttribute="top" secondItem="3YH-u6-NL8" secondAttribute="bottom" id="mK6-Dd-w4n"/>
+                            <constraint firstItem="Ea4-ux-buz" firstAttribute="top" secondItem="3YH-u6-NL8" secondAttribute="bottom" id="tNo-Fu-iZV"/>
                             <constraint firstItem="Gox-7W-Tzf" firstAttribute="top" secondItem="Kqc-ZR-rOt" secondAttribute="bottom" constant="8" id="vN4-sY-jdY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gox-7W-Tzf" secondAttribute="trailing" constant="-20" id="y2G-dJ-oUt"/>
                         </constraints>
