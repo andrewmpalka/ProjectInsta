@@ -78,8 +78,8 @@ extension LogInViewController {
         switch accounts.count {
         case 0:
             UIApplication.sharedApplication().openURL(NSURL(string: "https://twitter.com/signup")!)
-        case 1:
-            self.authAccount(accounts[0])
+//        case 1:
+//            self.authAccount(accounts[0])
             
         default:
             self.selectTwitterAccount(accounts)

@@ -18,3 +18,5 @@ let STATUS_ACCOUNT_NONEXIST = -8
 let LOG_IN_SEGUE = "logInSegue"
 
 var GLOBAL_CACHE = Cache()
+
+var STRING_STORE = [String]()

@@ -15,7 +15,15 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("HERE")
+        // Do any additional setup after loading the view.
+        let photoDownload = PhotoDownloader()
+        let string = "ag_H6QN7_normal.jpeg"
+        profilePic.layer.cornerRadius = 30
+
+        photoDownload.downloadImageForImageView(string, view: profilePic)
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         
         profilePic.backgroundColor = .blackColor()
         profilePic.layer.cornerRadius = 30
@@ -23,7 +31,6 @@ class ProfileViewController: UIViewController {
         let string = "Pure-CSS-Animated-Clouds.jpg"
         
         photoDownloader.downloadImageForImageView(string, view: imageView)
-        // Do any additional setup after loading the view.
     }
 
 

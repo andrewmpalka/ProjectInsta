@@ -25,7 +25,7 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.appDelegate.login()
+//        self.appDelegate.login()
 
         
         // Do any additional setup after loading the view.
