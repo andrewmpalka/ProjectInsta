@@ -17,7 +17,8 @@ class Post {
     var postKey: String?
     var username: String?
     var timeStamp: String?
-    var postCreator: String?
+    var postCreator = ""
+
     //    var timeStamp: String
     
     init(description: String?, imageURL: String, username: String, timeStamp: String, postCreator: String) {
@@ -26,9 +27,8 @@ class Post {
         self.username = username
         self.comment = NSMutableArray()
         self.timeStamp = timeStamp
-        self.postCreator = postCreator
-        
-        
+//        self.postCreator = postCreator
+
     }
     
     init(postKey: String, dictionary: Dictionary<String, AnyObject>) {
@@ -37,6 +37,10 @@ class Post {
         
         if let likes = dictionary["likes"] as? Int {
             self.likes = likes
+        }
+        
+        if let postCreator = dictionary["postCreator"] as? String {
+            self.postCreator = postCreator
         }
         
         if let desc = dictionary["description"] as? String {

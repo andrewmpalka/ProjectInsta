@@ -7,31 +7,25 @@
 //
 
 import UIKit
-import AWSS3
 
-class ProfileViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ProfileViewController: UIViewController {
     
-        @IBOutlet var selectedImage:UIImageView?
-        var imagePickerController:UIImagePickerController?
-        var loadingBg:UIView?
-        var progressView:UIView?
-        var progressLabel:UILabel?
-        
-        var uploadRequest:AWSS3TransferManagerUploadRequest?
-        var filesize:Int64 = 0
-        var amountUploaded:Int64 = 0
-
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var profilePic: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("HERE")
+        
+        profilePic.backgroundColor = .blackColor()
+        profilePic.layer.cornerRadius = 30
+        let photoDownloader = PhotoDownloader()
+        let string = "Pure-CSS-Animated-Clouds.jpg"
+        
+        photoDownloader.downloadImageForImageView(string, view: imageView)
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation

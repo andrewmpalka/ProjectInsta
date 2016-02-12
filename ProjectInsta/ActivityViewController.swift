@@ -16,7 +16,9 @@ class ActivityViewController: UIViewController {
         super.viewDidLoad()
         print("HERE")
         let photoDownloader = PhotoDownloader()
-//        photoDownloader.downloadImageForImageView(string, view: imageView)
+        let string = "Pure-CSS-Animated-Clouds.jpg"
+        
+    photoDownloader.downloadImageForImageView(string, view: imageView)
         // Do any additional setup after loading the view.
     }
 

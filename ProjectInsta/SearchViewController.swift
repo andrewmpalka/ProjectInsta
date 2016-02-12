@@ -10,18 +10,18 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+   
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("HERE")
 
-        // Do any additional setup after loading the view.
+        let photoDownloader = PhotoDownloader()
+        let string = "Pure-CSS-Animated-Clouds.jpg"
+        
+        photoDownloader.downloadImageForImageView(string, view: imageView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
     /*
     // MARK: - Navigation
 

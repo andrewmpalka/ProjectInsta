@@ -9,17 +9,17 @@
 import UIKit
 import Firebase
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+
 
     @IBOutlet weak var tableView: UITableView!
-
+    
     var posts = [Post]()
     var users = [User]()
+    var post = Post!()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-
+        
         
         DataService.ds.REF_POST.observeEventType(.Value, withBlock: { snapshot in
             self.posts = []
@@ -32,6 +32,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         let key = snap.key
                         let post = Post(postKey: key, dictionary: postDictionary)
                         self.posts.insert(post, atIndex: 0)
+                    
                     }
                 }
             }

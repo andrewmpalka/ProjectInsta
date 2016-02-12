@@ -11,12 +11,6 @@ import Firebase
 
 let URL_BASE = "https://instagramproject.firebaseio.com/"
 
-//var REF_USER_CURRENT: Firebase {
-//    let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_ID) as! String
-//    let userCreator = Firebase(url: "\(URL_BASE)").childByAppendingPath("user").childByAppendingPath(uid).childByAppendingPath("Email")
-//    return userCreator
-//}
-
 class DataService {
     static let ds = DataService()
     private var _REF_BASE = Firebase(url: "\(URL_BASE)")
@@ -43,5 +37,8 @@ class DataService {
     }
     func createFireBasePost(uid:String, post: Dictionary<String, AnyObject>) {
         REF_POST.childByAppendingPath(uid).setValue(post)
+    }
+    func whoIsUser(uid:String) {
+        REF_POST.childByAppendingPath(uid).childByAppendingPath("postCreator")
     }
 }
