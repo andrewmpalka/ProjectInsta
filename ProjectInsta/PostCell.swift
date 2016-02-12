@@ -12,6 +12,7 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var postDescriptionTextView: UITextView!
     
+    @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var commentsTextView: UITextView!
     @IBOutlet weak var likesImage: UIImageView!
@@ -19,15 +20,25 @@ class PostCell: UITableViewCell {
     var post: Post!
     var user: User!
     
+    func decodeImage() -> UIImage {
+        let newImageString = post.imageString
+        let imageData = newImageString.dataUsingEncoding(NSUTF8StringEncoding)
+        let decodedData = NSData(base64EncodedData: imageData!, options: NSDataBase64DecodingOptions())
+        let decodedImage = UIImage(data: decodedData!)
+        
+        return decodedImage!
+        
+    }
+    
     
     
     
     func configureCell(post: Post) {
         self.post = post
-
     self.postDescriptionTextView!.text = post.postDescription
     self.numberOfLikesLabel.text = String(post.likes)
     self.usernameLabel.text = String(post.postCreator)
+    self.postImageView.image = self.decodeImage()
 
     }
     

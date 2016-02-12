@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 
 let URL_BASE = "https://instagramproject.firebaseio.com/"
+let imageRef = "https://instagramproject.firebaseio.com/post/"
 
 class DataService {
     static let ds = DataService()

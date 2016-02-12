@@ -11,19 +11,19 @@ import Firebase
 
 class Post {
     var postDescription: String!
-    var imageURL: String!
     var likes: Int!
     var comment: NSMutableArray!
     var postKey: String?
     var username: String?
     var timeStamp: String?
     var postCreator = ""
+    var imageString: NSString = ""
+
 
     //    var timeStamp: String
     
-    init(description: String?, imageURL: String, username: String, timeStamp: String, postCreator: String) {
-        self.postDescription = description! 
-        self.imageURL = imageURL
+    init(description: String?, username: String, timeStamp: String, postCreator: String) {
+        self.postDescription = description!
         self.username = username
         self.comment = NSMutableArray()
         self.timeStamp = timeStamp
@@ -48,6 +48,9 @@ class Post {
         }
         if let comment = dictionary["comment"] as? NSMutableArray {
             self.comment = comment
+        }
+        if let imageString = dictionary["imageString"] as? NSString {
+            self.imageString = imageString
         }
     }
 }
