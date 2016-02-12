@@ -10,12 +10,14 @@ import UIKit
 import Firebase
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
+    
     @IBOutlet weak var tableView: UITableView!
+    
     
     var posts = [Post]()
     var users = [User]()
     var post = Post!()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,30 +41,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.tableView.reloadData()
         
         })
-        
-        DataService.ds.REF_USER.observeEventType(.Value, withBlock: { snapshot in
-            self.users = []
-            
-            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
-                
-                for snap in snapshots {
-//                  print("SNAP \(snap)")
-                    
-                    if let userDictionary = snap.value as? (Dictionary<String, AnyObject>) {
-                        let uKey = snap.key
-                        let user = User(userKey: uKey, dictionary: userDictionary)
-                        self.users.append(user)
-                    
-                    }
-                }
-            }
-            self.tableView.reloadData()
-        })
-    
-        
-        }
-    
-    
+}
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,7 +50,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
-//        let user = users[indexPath.row]
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell
         {

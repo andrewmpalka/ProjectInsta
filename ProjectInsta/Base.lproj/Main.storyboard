@@ -121,6 +121,7 @@
                                             <outlet property="likesImage" destination="ESq-CQ-re2" id="Lks-4d-h6J"/>
                                             <outlet property="numberOfLikesLabel" destination="SW1-KU-QSR" id="vse-qJ-pj6"/>
                                             <outlet property="postDescriptionTextView" destination="igW-Wr-Roe" id="cye-PH-Jgj"/>
+                                            <outlet property="postImageView" destination="qRE-hM-eDU" id="Dy5-k3-4Up"/>
                                             <outlet property="usernameLabel" destination="C8o-oG-FwI" id="yKh-Gf-eMp"/>
                                         </connections>
                                     </tableViewCell>

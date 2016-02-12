@@ -17,6 +17,8 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var choosePhoto: UIButton!
     @IBOutlet weak var takePicture: UIButton!
     
+    var base64String: NSString?
+    
     var REF_USER_CURRENT: Firebase {
         let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_ID) as! String
         let user = Firebase(url: "\(URL_BASE)").childByAppendingPath("user").childByAppendingPath(uid)
@@ -101,7 +103,13 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
        
         
         let image = imageView.image
-        self.uploadImage(image!, key: timeString)
+//        self.uploadImage(image!, key: timeString)
+        var uploadImage: UIImage = imageView.image!
+        var imageData: NSData = UIImageJPEGRepresentation(uploadImage, 0.5)!
+        self.base64String = imageData.base64EncodedStringWithOptions([])
+
+        
+
         
         
         var REF_USER_CURRENT: Firebase {
@@ -131,7 +139,8 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
             "description": captionTextView.text,
             "likes": 0,
             "timeStamp": timeString,
-            "postCreator": postCreator!
+            "postCreator": postCreator!,
+            "imageString": base64String!
         
         ]
         
